@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+@color-main: black;
+
+@color-alt: #999;
+
+@width-main: 32px;
+@height-main: 4px;
+@gap-main: 10px;
+
+
+.si {
+    display: inline-block;
+    margin: 100px auto;
+    padding: @gap-main 0;
+    cursor: pointer;
+    //background-color: orange;
+    //overflow: hidden;
+    span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        clip: rect(0, 0, 0,0);
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+    }
+    a {
+        transition: ease-in-out all .250s;
+        &:before,
+        &:after {
+            transition: ease-in-out all .250s;
+        }
+    }
+    .si-close {
+        background-color: transparent;
+    }
+    &:hover {
+        [class^="si-"] {
+            background-color: #999;
+            &:before,
+            &:after {
+                background-color: #999;
+            }
+        }
+        .si-close {
+            background-color: transparent;
+        }
+    }
+}
+
+[class^="si-"]{
+    position: relative;
+    display: block;
+    height: @height-main;
+    width: @width-main;
+    // change this value to increase o reduce the icon size
+    transform: scale(1);
+    background-color: @color-main;
+    &:before,
+    &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: @width-main;
+        height: @height-main;
+        background-color: @color-main;
+    }
+}
+
+
+.si-nav {
+    &:before {
+        transform: translateY(-@gap-main;);
+    }
+    &:after{
+        transform: translateY(@gap-main;);
+    }
+}
+
+.si-close {
+    &:before {
+        transform: translateX(0px)  rotate(45deg);
+    }
+    &:after {
+        transform: translateX(0px)  rotate(-45deg);
+    }
+}
