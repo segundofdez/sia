@@ -2,6 +2,6 @@ import $ from 'jquery'
 
 $(function(){
 	$('.si').click(function(){
-		$('.si a').toggleClass('si-right');
+		$('.si a').toggleClass('si-top');
 	});
 });

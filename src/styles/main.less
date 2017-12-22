@@ -1,5 +1,4 @@
 body {
-    font-family: sans-serif;
     text-align: center;
 }
 
@@ -17,8 +16,7 @@ body {
     margin: 100px auto;
     padding: @gap-main 0;
     cursor: pointer;
-    //background-color: orange;
-    //overflow: hidden;
+    // background-color: orange;
     span {
         position: absolute;
         width: 1px;
@@ -37,7 +35,9 @@ body {
         }
     }
     .si-close,
+    .si-top,
     .si-right,
+    .si-bottom,
     .si-left {
         background-color: transparent;
     }
@@ -50,7 +50,9 @@ body {
             }
         }
         .si-close,
+        .si-top,
         .si-right,
+        .si-bottom,
         .si-left {
             background-color: transparent;
         }
@@ -95,6 +97,17 @@ body {
     }
 }
 
+.si-top {
+    &:before {
+        transform: translateX(-1px) translateY(-@gap-main/3) rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(@gap-main+1.5) translateY(-@gap-main/3)  rotate(45deg);
+        width: @width-main / 1.5;
+    }
+}
+
 .si-right {
     &:before {
         transform: translateX(@gap-main/2) translateY(-@gap-main + 3)  rotate(45deg);
@@ -102,6 +115,17 @@ body {
     }
     &:after {
         transform: translateX(@gap-main/2) translateY(@gap-main - 3;) rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+}
+
+.si-bottom {
+    &:before {
+        transform: translateX(-1px) translateY(@gap-main - (@gap-main/1.5)) rotate(45deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(@gap-main+1.5) translateY(@gap-main - (@gap-main/1.5))  rotate(-45deg);
         width: @width-main / 1.5;
     }
 }
