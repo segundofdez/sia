@@ -36,7 +36,9 @@ body {
             transition: ease-in-out all .250s;
         }
     }
-    .si-close {
+    .si-close,
+    .si-right,
+    .si-left {
         background-color: transparent;
     }
     &:hover {
@@ -47,7 +49,9 @@ body {
                 background-color: #999;
             }
         }
-        .si-close {
+        .si-close,
+        .si-right,
+        .si-left {
             background-color: transparent;
         }
     }
@@ -88,5 +92,27 @@ body {
     }
     &:after {
         transform: translateX(0px)  rotate(-45deg);
+    }
+}
+
+.si-right {
+    &:before {
+        transform: translateX(@gap-main/2) translateY(-@gap-main + 3)  rotate(45deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(@gap-main/2) translateY(@gap-main - 3;) rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+}
+
+.si-left {
+    &:before {
+        transform: translateX(@gap-main/2) translateY(-@gap-main + 3)  rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(@gap-main/2) translateY(@gap-main - 3;) rotate(45deg);
+        width: @width-main / 1.5;
     }
 }

@@ -475,7 +475,9 @@ body {
   -webkit-transition: ease-in-out all 0.25s;
   transition: ease-in-out all 0.25s;
 }
-.si .si-close {
+.si .si-close,
+.si .si-right,
+.si .si-left {
   background-color: transparent;
 }
 .si:hover [class^="si-"] {
@@ -485,7 +487,9 @@ body {
 .si:hover [class^="si-"]:after {
   background-color: #999;
 }
-.si:hover .si-close {
+.si:hover .si-close,
+.si:hover .si-right,
+.si:hover .si-left {
   background-color: transparent;
 }
 [class^="si-"] {
@@ -521,4 +525,24 @@ body {
 .si-close:after {
   -webkit-transform: translateX(0px) rotate(-45deg);
           transform: translateX(0px) rotate(-45deg);
+}
+.si-right:before {
+  -webkit-transform: translateX(5px) translateY(-7px) rotate(45deg);
+          transform: translateX(5px) translateY(-7px) rotate(45deg);
+  width: 21.33333333px;
+}
+.si-right:after {
+  -webkit-transform: translateX(5px) translateY(7px) rotate(-45deg);
+          transform: translateX(5px) translateY(7px) rotate(-45deg);
+  width: 21.33333333px;
+}
+.si-left:before {
+  -webkit-transform: translateX(5px) translateY(-7px) rotate(-45deg);
+          transform: translateX(5px) translateY(-7px) rotate(-45deg);
+  width: 21.33333333px;
+}
+.si-left:after {
+  -webkit-transform: translateX(5px) translateY(7px) rotate(45deg);
+          transform: translateX(5px) translateY(7px) rotate(45deg);
+  width: 21.33333333px;
 }

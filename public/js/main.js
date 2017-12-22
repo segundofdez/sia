@@ -83,7 +83,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
 	__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.si').click(function () {
-		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.si a').toggleClass('si-close');
+		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.si a').toggleClass('si-right');
 	});
 });
 
