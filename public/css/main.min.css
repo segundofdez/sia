@@ -448,10 +448,52 @@ template {
 
 body {
   text-align: center;
+  font-family: sans-serif;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.name {
+  color: #999;
+  margin-top: 1em;
+}
+header {
+  margin: 4em 1em;
+}
+.test {
+  background-color: #f5f5f5;
+  padding: 5em 1.5em;
+}
+.test .si {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.test ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+              -ms-flex-pack: center;
+          justify-content: center;
+}
+.test li {
+  margin: 0;
+  padding: 2em;
+  border: 1px solid #f0f0f0;
+  background-color: white;
 }
 .si {
   display: inline-block;
-  margin: 100px auto;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   padding: 10px 0;
   cursor: pointer;
 }
@@ -474,7 +516,7 @@ body {
   -webkit-transition: ease-in-out all 0.25s;
   transition: ease-in-out all 0.25s;
 }
-.si .si-close,
+.si .si-cross,
 .si .si-top,
 .si .si-right,
 .si .si-bottom,
@@ -488,7 +530,7 @@ body {
 .si:hover [class^="si-"]:after {
   background-color: #999;
 }
-.si:hover .si-close,
+.si:hover .si-cross,
 .si:hover .si-top,
 .si:hover .si-right,
 .si:hover .si-bottom,
@@ -500,8 +542,6 @@ body {
   display: block;
   height: 4px;
   width: 32px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
   background-color: black;
 }
 [class^="si-"]:before,
@@ -521,22 +561,36 @@ body {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
-.si-close:before {
+.si-cross:before {
   -webkit-transform: translateX(0px) rotate(45deg);
           transform: translateX(0px) rotate(45deg);
 }
-.si-close:after {
+.si-cross:after {
   -webkit-transform: translateX(0px) rotate(-45deg);
           transform: translateX(0px) rotate(-45deg);
 }
 .si-top:before {
-  -webkit-transform: translateX(-1px) translateY(-3.33333333px) rotate(-45deg);
-          transform: translateX(-1px) translateY(-3.33333333px) rotate(-45deg);
+  -webkit-transform: translateX(-1px) translateY(0) rotate(-45deg);
+          transform: translateX(-1px) translateY(0) rotate(-45deg);
   width: 21.33333333px;
 }
 .si-top:after {
-  -webkit-transform: translateX(11.5px) translateY(-3.33333333px) rotate(45deg);
-          transform: translateX(11.5px) translateY(-3.33333333px) rotate(45deg);
+  -webkit-transform: translateX(11.5px) translateY(0) rotate(45deg);
+          transform: translateX(11.5px) translateY(0) rotate(45deg);
+  width: 21.33333333px;
+}
+.si-toparrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.si-toparrow:before {
+  -webkit-transform: translateX(-3px) translateY(6.66666667px) rotate(-135deg);
+          transform: translateX(-3px) translateY(6.66666667px) rotate(-135deg);
+  width: 21.33333333px;
+}
+.si-toparrow:after {
+  -webkit-transform: translateX(-3px) translateY(-6.66666667px) rotate(135deg);
+          transform: translateX(-3px) translateY(-6.66666667px) rotate(135deg);
   width: 21.33333333px;
 }
 .si-right:before {
@@ -549,14 +603,38 @@ body {
           transform: translateX(5px) translateY(7px) rotate(-45deg);
   width: 21.33333333px;
 }
+.si-rightarrow:before {
+  -webkit-transform: translateX(13px) translateY(-7px) rotate(45deg);
+          transform: translateX(13px) translateY(-7px) rotate(45deg);
+  width: 21.33333333px;
+}
+.si-rightarrow:after {
+  -webkit-transform: translateX(13px) translateY(7px) rotate(-45deg);
+          transform: translateX(13px) translateY(7px) rotate(-45deg);
+  width: 21.33333333px;
+}
 .si-bottom:before {
-  -webkit-transform: translateX(-1px) translateY(3.33333333px) rotate(45deg);
-          transform: translateX(-1px) translateY(3.33333333px) rotate(45deg);
+  -webkit-transform: translateX(-1px) translateY(0) rotate(45deg);
+          transform: translateX(-1px) translateY(0) rotate(45deg);
   width: 21.33333333px;
 }
 .si-bottom:after {
-  -webkit-transform: translateX(11.5px) translateY(3.33333333px) rotate(-45deg);
-          transform: translateX(11.5px) translateY(3.33333333px) rotate(-45deg);
+  -webkit-transform: translateX(11.5px) translateY(0) rotate(-45deg);
+          transform: translateX(11.5px) translateY(0) rotate(-45deg);
+  width: 21.33333333px;
+}
+.si-bottomarrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.si-bottomarrow:before {
+  -webkit-transform: translateX(13px) translateY(7px) rotate(135deg);
+          transform: translateX(13px) translateY(7px) rotate(135deg);
+  width: 21.33333333px;
+}
+.si-bottomarrow:after {
+  -webkit-transform: translateX(13px) translateY(-7px) rotate(-135deg);
+          transform: translateX(13px) translateY(-7px) rotate(-135deg);
   width: 21.33333333px;
 }
 .si-left:before {
@@ -568,4 +646,18 @@ body {
   -webkit-transform: translateX(5px) translateY(7px) rotate(45deg);
           transform: translateX(5px) translateY(7px) rotate(45deg);
   width: 21.33333333px;
+}
+.si-leftarrow:before {
+  -webkit-transform: translateX(-3px) translateY(-7px) rotate(-45deg);
+          transform: translateX(-3px) translateY(-7px) rotate(-45deg);
+  width: 21.33333333px;
+}
+.si-leftarrow:after {
+  -webkit-transform: translateX(-3px) translateY(7px) rotate(45deg);
+          transform: translateX(-3px) translateY(7px) rotate(45deg);
+  width: 21.33333333px;
+}
+.si-plus:after {
+  -webkit-transform: translateX(0px) rotate(90deg);
+          transform: translateX(0px) rotate(90deg);
 }

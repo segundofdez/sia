@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(2);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
@@ -77,28 +77,39 @@ module.exports = __webpack_require__(2);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
-	__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.si').click(function () {
-		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.si a').toggleClass('si-top');
+	var icons = ["nav", "cross", "top", "right", "bottom", "left", "plus", "minus", "toparrow", "rightarrow", "bottomarrow", "leftarrow"];
+
+	var content = document.querySelectorAll('div');
+
+	Array.prototype.forEach.call(content, function (div) {
+		div.addEventListener('click', function () {
+			var index = div.dataset.index;
+			var className = icons[index];
+			var link = div.querySelector('a');
+
+			var pieces = link.getAttribute('class').split('-');
+
+			++index;
+
+			if (icons[index] === undefined) {
+				index = 0;
+			}
+
+			pieces[1] = icons[index];
+			link.setAttribute('class', pieces.join('-'));
+			div.dataset.index = index;
+			document.querySelector('.name').innerHTML = '.' + pieces.join('-');
+		});
 	});
 });
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10356,6 +10367,12 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

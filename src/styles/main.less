@@ -1,5 +1,44 @@
 body {
     text-align: center;
+    font-family: sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.name {
+    color: #999;
+    margin-top: 1em;
+}
+
+header {
+    margin: 4em 1em;
+}
+
+.test {
+    background-color: #f5f5f5;
+    padding: 5em 1.5em;
+    .si {
+        transform: scale(.5);
+    }
+    [class^="si-"]{
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    li {
+        margin: 0;
+        padding: 2em;
+        border:1px solid #f0f0f0;
+        background-color: white;
+    }
 }
 
 @color-main: black;
@@ -13,10 +52,12 @@ body {
 
 .si {
     display: inline-block;
-    margin: 100px auto;
+    // change this value to increase o reduce the icon size
+    transform: scale(1);
     padding: @gap-main 0;
     cursor: pointer;
-    // background-color: orange;
+   //background-color: orange;
+   // overflow: hidden;
     span {
         position: absolute;
         width: 1px;
@@ -34,7 +75,7 @@ body {
             transition: ease-in-out all .250s;
         }
     }
-    .si-close,
+    .si-cross,
     .si-top,
     .si-right,
     .si-bottom,
@@ -49,7 +90,7 @@ body {
                 background-color: #999;
             }
         }
-        .si-close,
+        .si-cross,
         .si-top,
         .si-right,
         .si-bottom,
@@ -64,8 +105,6 @@ body {
     display: block;
     height: @height-main;
     width: @width-main;
-    // change this value to increase o reduce the icon size
-    transform: scale(1);
     background-color: @color-main;
     &:before,
     &:after {
@@ -88,7 +127,7 @@ body {
     }
 }
 
-.si-close {
+.si-cross {
     &:before {
         transform: translateX(0px)  rotate(45deg);
     }
@@ -99,16 +138,27 @@ body {
 
 .si-top {
     &:before {
-        transform: translateX(-1px) translateY(-@gap-main/3) rotate(-45deg);
+        transform: translateX(-1px) translateY(0) rotate(-45deg);
         width: @width-main / 1.5;
     }
     &:after {
-        transform: translateX(@gap-main+1.5) translateY(-@gap-main/3)  rotate(45deg);
+        transform: translateX(@gap-main+1.5) translateY(0)  rotate(45deg);
+        width: @width-main / 1.5;
+    }
+}
+.si-toparrow {
+    transform: rotate(90deg);
+    &:before {
+        transform: translateX(-3px) translateY(@gap-main/1.5) rotate(-135deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(-3px) translateY(-@gap-main/1.5)  rotate(135deg);
         width: @width-main / 1.5;
     }
 }
 
-.si-right {
+.si-right{
     &:before {
         transform: translateX(@gap-main/2) translateY(-@gap-main + 3)  rotate(45deg);
         width: @width-main / 1.5;
@@ -118,14 +168,35 @@ body {
         width: @width-main / 1.5;
     }
 }
-
-.si-bottom {
+.si-rightarrow {
     &:before {
-        transform: translateX(-1px) translateY(@gap-main - (@gap-main/1.5)) rotate(45deg);
+        transform: translateX(@gap-main + 3) translateY(-@gap-main + 3)  rotate(45deg);
         width: @width-main / 1.5;
     }
     &:after {
-        transform: translateX(@gap-main+1.5) translateY(@gap-main - (@gap-main/1.5))  rotate(-45deg);
+        transform: translateX(@gap-main + 3) translateY(@gap-main - 3;) rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+}
+
+.si-bottom{
+    &:before {
+        transform: translateX(-1px) translateY(0) rotate(45deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(@gap-main+1.5) translateY(0)  rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+}
+.si-bottomarrow {
+    transform: rotate(90deg);
+    &:before {
+        transform: translateX(@gap-main + 3) translateY(@gap-main - 3) rotate(135deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(@gap-main + 3) translateY(-@gap-main + 3) rotate(-135deg);
         width: @width-main / 1.5;
     }
 }
@@ -140,3 +211,21 @@ body {
         width: @width-main / 1.5;
     }
 }
+.si-leftarrow {
+    &:before {
+        transform: translateX(-3px) translateY(-@gap-main + 3)  rotate(-45deg);
+        width: @width-main / 1.5;
+    }
+    &:after {
+        transform: translateX(-3px) translateY(@gap-main - 3;) rotate(45deg);
+        width: @width-main / 1.5;
+    }
+}
+
+
+.si-plus {
+    &:after {
+        transform: translateX(0px)  rotate(90deg);
+    }
+}
+
