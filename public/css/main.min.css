@@ -486,9 +486,25 @@ header {
 }
 .test li {
   margin: 0;
-  padding: 2em;
+  padding: 1em;
+  -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+          flex-grow: 1;
   border: 1px solid #f0f0f0;
   background-color: white;
+}
+.example {
+  padding: 2em 1em;
+  background-color: #292933;
+}
+pre,
+code {
+  font-size: 13px;
+  padding: 0;
+  color: yellow;
+  margin: 0;
+  line-height: 1.4em;
+  white-space: pre-wrap;
 }
 .si {
   display: inline-block;
@@ -520,7 +536,13 @@ header {
 .si .si-top,
 .si .si-right,
 .si .si-bottom,
-.si .si-left {
+.si .si-left,
+.si .si-circle,
+.si .si-circleo {
+  background-color: transparent;
+}
+.si .si-circle:after,
+.si .si-circleo:after {
   background-color: transparent;
 }
 .si:hover [class^="si-"] {
@@ -535,6 +557,19 @@ header {
 .si:hover .si-right,
 .si:hover .si-bottom,
 .si:hover .si-left {
+  background-color: transparent;
+}
+.si:hover .si-circle {
+  background-color: transparent;
+}
+.si:hover .si-circle:after {
+  background-color: transparent;
+}
+.si:hover .si-circleo {
+  background-color: transparent;
+}
+.si:hover .si-circleo:after,
+.si:hover .si-circleo:before {
   background-color: transparent;
 }
 [class^="si-"] {
@@ -660,4 +695,25 @@ header {
 .si-plus:after {
   -webkit-transform: translateX(0px) rotate(90deg);
           transform: translateX(0px) rotate(90deg);
+}
+.si-circle:before {
+  height: 32px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-12.5px);
+          transform: translateY(-12.5px);
+}
+.si-circleo:before {
+  background-color: transparent;
+  border: 3px solid black;
+  height: 32px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-12.5px);
+          transform: translateY(-12.5px);
+}
+.si-circleo:hover {
+  background-color: transparent;
+}
+.si-circleo:hover:before {
+  background-color: transparent;
+  border-color: #999;
 }

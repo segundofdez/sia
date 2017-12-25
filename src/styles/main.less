@@ -35,10 +35,24 @@ header {
     }
     li {
         margin: 0;
-        padding: 2em;
+        padding: 1em;
+        flex-grow: 1;
         border:1px solid #f0f0f0;
         background-color: white;
     }
+}
+.example {
+    padding: 2em 1em;
+    background-color: rgb(41, 41, 51);
+}
+pre,
+code {
+    font-size: 13px;
+    padding: 0;
+    color: yellow;
+    margin: 0;
+    line-height: 1.4em;
+    white-space: pre-wrap;
 }
 
 @color-main: black;
@@ -56,7 +70,7 @@ header {
     transform: scale(1);
     padding: @gap-main 0;
     cursor: pointer;
-   //background-color: orange;
+    //background-color: orange;
    // overflow: hidden;
     span {
         position: absolute;
@@ -79,8 +93,16 @@ header {
     .si-top,
     .si-right,
     .si-bottom,
-    .si-left {
+    .si-left,
+    .si-circle,
+    .si-circleo {
         background-color: transparent;
+    }
+    .si-circle,
+    .si-circleo {
+        &:after {
+            background-color: transparent;
+        }
     }
     &:hover {
         [class^="si-"] {
@@ -96,6 +118,19 @@ header {
         .si-bottom,
         .si-left {
             background-color: transparent;
+        }
+        .si-circle{
+            background-color: transparent;
+            &:after,{
+                background-color: transparent;
+            }
+        }
+
+        .si-circleo {
+            background-color: transparent;
+            &:after,&:before {
+                background-color: transparent;
+            }
         }
     }
 }
@@ -226,6 +261,30 @@ header {
 .si-plus {
     &:after {
         transform: translateX(0px)  rotate(90deg);
+    }
+}
+
+.si-circle {
+    &:before{
+        height: @width-main;
+        border-radius: 50%;
+        transform: translateY(-@gap-main * 1.25);
+    }
+}
+.si-circleo {
+    &:before{
+        background-color: transparent;
+        border: 3px solid @color-main;
+        height: @width-main;
+        border-radius: 50%;
+        transform: translateY(-@gap-main * 1.25);
+    }
+    &:hover {
+        background-color: transparent;
+        &:before{
+            background-color: transparent;
+            border-color: @color-alt;
+        }
     }
 }
 

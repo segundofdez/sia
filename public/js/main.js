@@ -82,7 +82,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
-	var icons = ["nav", "cross", "top", "right", "bottom", "left", "plus", "minus", "toparrow", "rightarrow", "bottomarrow", "leftarrow"];
+	var icons = ["nav", "cross", "top", "right", "bottom", "left", "plus", "minus", "toparrow", "rightarrow", "bottomarrow", "leftarrow", "circle", "circleo"];
 
 	var content = document.querySelectorAll('div');
 

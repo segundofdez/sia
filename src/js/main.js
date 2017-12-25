@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 $(function(){
-	var icons = ["nav","cross","top","right","bottom","left","plus","minus","toparrow","rightarrow","bottomarrow","leftarrow"];
+	var icons = ["nav","cross","top","right","bottom","left","plus","minus","toparrow","rightarrow","bottomarrow","leftarrow","circle","circleo"];
 
 	var content = document.querySelectorAll('div');
 
