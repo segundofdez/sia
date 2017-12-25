@@ -480,16 +480,20 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+              -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
               -ms-flex-pack: center;
           justify-content: center;
 }
 .test li {
-  margin: 0;
-  padding: 1em;
   -webkit-box-flex: 1;
               -ms-flex-positive: 1;
           flex-grow: 1;
+  margin: 0;
+  padding: 1em;
   border: 1px solid #f0f0f0;
   background-color: white;
 }
