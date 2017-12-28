@@ -1,0 +1,299 @@
+/* ==========================================================================
+   Sia - Simple Icon Animation
+   ========================================================================== */
+/*
+ * Create an animation on links
+ *
+ * Html example:
+ * -----------------------------------------------------------------------------
+ * <div class="si">
+ *      <a class="si-nav" href="#"><span>hide/show navigation</span></a>
+ * </div>
+ */
+
+/* Variables
+   ========================================================================== */
+@color-main: black;
+@color-hover: #999;
+
+@icon-width: 32px;
+@icon-height: 32px;
+
+@icon-width-mini: 21px;
+
+@main-height: @icon-height / 8;
+@main-gap: 10px;
+
+/* Common classes
+   ========================================================================== */
+.transparent {
+    background-color: transparent !important;
+}
+.color-hover {
+    background-color: @color-hover;
+}
+
+.transition {
+    transition: ease-in-out all .250s;
+}
+
+.center {
+    transform: translateY(@main-height + @main-gap);
+}
+
+.icon-width-mini {
+    width: @icon-width-mini !important;
+}
+
+/* Icon container
+   ========================================================================== */
+.si {
+    display: inline-block;
+    height: @icon-height;
+    width: @icon-width;
+    cursor: pointer;
+    span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        clip: rect(0, 0, 0,0);
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+    }
+    [class^="si-"] {
+        &:extend(.transition);
+        &:before,
+        &:after {
+            &:extend(.transition);
+        }
+    }
+    .si-cross,
+    .si-plus,
+    .si-check,
+    .si-search,
+    .si-top,
+    .si-right,
+    .si-bottom,
+    .si-left,
+    .si-circleo {
+        &:extend(.transparent);
+    }
+    .si-minus,
+    .si-circle,
+    .si-circleo{
+        &:before,
+        &:after {
+            &:extend(.transparent);
+        }
+    }
+    .si-search {
+        &:after {
+            &:extend(.transparent);
+        }
+    }
+    &:hover {
+        [class^="si-"]:extend(.color-hover) {
+            &:before:extend(.color-hover),
+            &:after:extend(.color-hover) {
+            }
+        }
+        .si-cross:extend(.transparent),
+        .si-plus:extend(.transparent),
+        .si-check:extend(.transparent),
+        .si-search:extend(.transparent),
+        .si-top:extend(.transparent),
+        .si-right:extend(.transparent),
+        .si-bottom:extend(.transparent),
+        .si-left:extend(.transparent),
+        .si-circleo:extend(.transparent)  {
+        }
+        .si-minus,
+        .si-circle,
+        .si-circleo {
+            &:before:extend(.transparent) ,
+            &:after:extend(.transparent) {
+            }
+        }
+        .si-search{
+            border-color: @color-hover;
+            &:after:extend(.transparent) {
+            }
+        }
+    }
+}
+
+/* Common icon
+   ========================================================================== */
+[class^="si-"] {
+    display: block;
+    position: relative;
+    width: @icon-width;
+    height: @main-height;
+    background-color: @color-main;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: @icon-width;
+        height: @main-height;
+        background-color: @color-main;
+    }
+}
+
+/* Icons
+   ========================================================================== */
+.si-nav {
+    transform: translateY(@icon-height/2 - @main-height/2);
+    &:before {
+        transform: translateY(-@main-gap);
+    }
+    &:after{
+        transform: translateY(@main-gap);
+    }
+}
+
+.si-cross {
+    &:extend(.center);
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.si-plus {
+    &:extend(.center);
+    &:before {
+        transform: rotate(90deg);
+    }
+}
+
+.si-minus {
+    &:extend(.center);
+}
+
+.si-check {
+    &:extend(.center);
+    &:before {
+        transform: translateX(@main-height)  translateY(@main-height) rotate(45deg);
+        width: @icon-width-mini / 2;
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@main-height * 2) rotate(-45deg);
+    }
+}
+
+.si-search {
+    height: @icon-height / 1.25;
+    width: @icon-width / 1.25;
+    border-radius: 50%;
+    border: 3px solid @color-main;
+    &:hover {
+        border-color: @color-hover;
+    }
+    &:before {
+        transform: translateX(@icon-width / 2) translateY(@icon-width-mini) rotate(45deg);
+        width: @icon-width-mini / 1.5;
+    }
+}
+
+.si-top {
+    &:extend(.center);
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(-1px) rotate(-45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@icon-width / 3 + 1px) rotate(45deg);
+    }
+}
+
+.si-right{
+    &:extend(.center);
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(@main-gap / 1.5) translateY(-@main-gap + @main-height)  rotate(45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@main-gap / 1.5) translateY(@main-gap - @main-height) rotate(-45deg);
+    }
+}
+
+.si-bottom {
+    &:extend(.center);
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(-1px) rotate(45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@icon-width / 3 + 1px) rotate(-45deg);
+    }
+}
+
+.si-left{
+    &:extend(.center);
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(@main-gap / 2) translateY(-@main-gap + @main-height) rotate(-45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@main-gap / 2) translateY(@main-gap - @main-height )  rotate(45deg);
+    }
+}
+
+.si-toparrow {
+    transform: translateX(2px) translateY(@main-height + @main-gap + 2px) rotate(90deg);
+    width: @icon-width-mini + @icon-width-mini / 3;
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(-@icon-width-mini / 4) translateY(@icon-width-mini / 3 - 1px) rotate(45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(-@icon-width-mini / 4) translateY(-@icon-width-mini / 3 + 1px) rotate(-45deg);
+    }
+}
+
+.si-rightarrow{
+    width: @icon-width-mini + @icon-width-mini / 3;
+    &:extend(.center);
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(@main-gap + 3px) translateY(-@main-gap + @main-height)  rotate(45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@main-gap + 3px) translateY(@main-gap - @main-height) rotate(-45deg);
+    }
+}
+
+.si-leftarrow{
+    transform: translateX(@main-height) translateY(@main-height + @main-gap);
+    width: @icon-width-mini + @icon-width-mini / 3;
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(-@icon-width-mini / 3 + 1px) translateY(-@main-gap + @main-height) rotate(-45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(-@icon-width-mini / 3 + 1px) translateY(@main-gap - @main-height )  rotate(45deg);
+    }
+}
+
+.si-bottomarrow {
+    transform: translateX(2px) translateY(@main-height + @main-gap - 2px) rotate(90deg);
+    width: @icon-width-mini + @icon-width-mini / 3;
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(@main-gap + 2px) translateY(@main-gap - @main-height) rotate(-45deg);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@main-gap + 2px) translateY(-@icon-width-mini / 3 + 1px) rotate(45deg);
+    }
+}
+
+.si-circle {
+    height: @icon-height;
+    border-radius: 50%;
+}
+
+.si-circleo {
+    &:extend(.si-circle);
+    border: 3px solid @color-main;
+    &:hover {
+        border-color: @color-hover;
+    }
+}

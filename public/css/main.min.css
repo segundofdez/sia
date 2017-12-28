@@ -446,6 +446,291 @@ template {
   display: none;
 }
 
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+/* Sia - Simple Icon Animation
+   ========================================================================== */
+/* ==========================================================================
+   Sia - Simple Icon Animation
+   ========================================================================== */
+/*
+ * Create an animation on links
+ *
+ * Html example:
+ * -----------------------------------------------------------------------------
+ * <div class="si">
+ *      <a class="si-nav" href="#"><span>hide/show navigation</span></a>
+ * </div>
+ */
+/* Variables
+   ========================================================================== */
+/* Common classes
+   ========================================================================== */
+.transparent,
+.si .si-cross,
+.si .si-plus,
+.si .si-check,
+.si .si-search,
+.si .si-top,
+.si .si-right,
+.si .si-bottom,
+.si .si-left,
+.si .si-circleo,
+.si .si-minus:before,
+.si .si-circle:before,
+.si .si-circleo:before,
+.si .si-minus:after,
+.si .si-circle:after,
+.si .si-circleo:after,
+.si .si-search:after,
+.si:hover .si-cross,
+.si:hover .si-plus,
+.si:hover .si-check,
+.si:hover .si-search,
+.si:hover .si-top,
+.si:hover .si-right,
+.si:hover .si-bottom,
+.si:hover .si-left,
+.si:hover .si-circleo,
+.si:hover .si-minus:before,
+.si:hover .si-circle:before,
+.si:hover .si-circleo:before,
+.si:hover .si-minus:after,
+.si:hover .si-circle:after,
+.si:hover .si-circleo:after,
+.si:hover .si-search:after {
+  background-color: transparent !important;
+}
+.color-hover,
+.si:hover [class^="si-"],
+.si:hover [class^="si-"]:before,
+.si:hover [class^="si-"]:after {
+  background-color: #999;
+}
+.transition,
+.si [class^="si-"],
+.si [class^="si-"]:before,
+.si [class^="si-"]:after {
+  -webkit-transition: ease-in-out all 0.25s;
+  transition: ease-in-out all 0.25s;
+}
+.center,
+.si-cross,
+.si-plus,
+.si-minus,
+.si-check,
+.si-top,
+.si-right,
+.si-bottom,
+.si-left,
+.si-rightarrow {
+  -webkit-transform: translateY(14px);
+          transform: translateY(14px);
+}
+.icon-width-mini,
+.si-check:after,
+.si-top:before,
+.si-top:after,
+.si-right:before,
+.si-right:after,
+.si-bottom:before,
+.si-bottom:after,
+.si-left:before,
+.si-left:after,
+.si-toparrow:before,
+.si-toparrow:after,
+.si-rightarrow:before,
+.si-rightarrow:after,
+.si-leftarrow:before,
+.si-leftarrow:after,
+.si-bottomarrow:before,
+.si-bottomarrow:after {
+  width: 21px !important;
+}
+/* Icon container
+   ========================================================================== */
+.si {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.si span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+}
+.si:hover .si-search {
+  border-color: #999;
+}
+/* Common icon
+   ========================================================================== */
+[class^="si-"] {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 4px;
+  background-color: black;
+}
+[class^="si-"]:before,
+[class^="si-"]:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: black;
+}
+/* Icons
+   ========================================================================== */
+.si-nav {
+  -webkit-transform: translateY(14px);
+          transform: translateY(14px);
+}
+.si-nav:before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.si-nav:after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.si-cross:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.si-cross:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.si-plus:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.si-check:before {
+  -webkit-transform: translateX(4px) translateY(4px) rotate(45deg);
+          transform: translateX(4px) translateY(4px) rotate(45deg);
+  width: 10.5px;
+}
+.si-check:after {
+  -webkit-transform: translateX(8px) rotate(-45deg);
+          transform: translateX(8px) rotate(-45deg);
+}
+.si-search {
+  height: 25.6px;
+  width: 25.6px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+.si-search:hover {
+  border-color: #999;
+}
+.si-search:before {
+  -webkit-transform: translateX(16px) translateY(21px) rotate(45deg);
+          transform: translateX(16px) translateY(21px) rotate(45deg);
+  width: 14px;
+}
+.si-top:before {
+  -webkit-transform: translateX(-1px) rotate(-45deg);
+          transform: translateX(-1px) rotate(-45deg);
+}
+.si-top:after {
+  -webkit-transform: translateX(11.66666667px) rotate(45deg);
+          transform: translateX(11.66666667px) rotate(45deg);
+}
+.si-right:before {
+  -webkit-transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
+          transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
+}
+.si-right:after {
+  -webkit-transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
+          transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
+}
+.si-bottom:before {
+  -webkit-transform: translateX(-1px) rotate(45deg);
+          transform: translateX(-1px) rotate(45deg);
+}
+.si-bottom:after {
+  -webkit-transform: translateX(11.66666667px) rotate(-45deg);
+          transform: translateX(11.66666667px) rotate(-45deg);
+}
+.si-left:before {
+  -webkit-transform: translateX(5px) translateY(-6px) rotate(-45deg);
+          transform: translateX(5px) translateY(-6px) rotate(-45deg);
+}
+.si-left:after {
+  -webkit-transform: translateX(5px) translateY(6px) rotate(45deg);
+          transform: translateX(5px) translateY(6px) rotate(45deg);
+}
+.si-toparrow {
+  -webkit-transform: translateX(2px) translateY(16px) rotate(90deg);
+          transform: translateX(2px) translateY(16px) rotate(90deg);
+  width: 28px;
+}
+.si-toparrow:before {
+  -webkit-transform: translateX(-5.25px) translateY(6px) rotate(45deg);
+          transform: translateX(-5.25px) translateY(6px) rotate(45deg);
+}
+.si-toparrow:after {
+  -webkit-transform: translateX(-5.25px) translateY(-6px) rotate(-45deg);
+          transform: translateX(-5.25px) translateY(-6px) rotate(-45deg);
+}
+.si-rightarrow {
+  width: 28px;
+}
+.si-rightarrow:before {
+  -webkit-transform: translateX(13px) translateY(-6px) rotate(45deg);
+          transform: translateX(13px) translateY(-6px) rotate(45deg);
+}
+.si-rightarrow:after {
+  -webkit-transform: translateX(13px) translateY(6px) rotate(-45deg);
+          transform: translateX(13px) translateY(6px) rotate(-45deg);
+}
+.si-leftarrow {
+  -webkit-transform: translateX(4px) translateY(14px);
+          transform: translateX(4px) translateY(14px);
+  width: 28px;
+}
+.si-leftarrow:before {
+  -webkit-transform: translateX(-6px) translateY(-6px) rotate(-45deg);
+          transform: translateX(-6px) translateY(-6px) rotate(-45deg);
+}
+.si-leftarrow:after {
+  -webkit-transform: translateX(-6px) translateY(6px) rotate(45deg);
+          transform: translateX(-6px) translateY(6px) rotate(45deg);
+}
+.si-bottomarrow {
+  -webkit-transform: translateX(2px) translateY(12px) rotate(90deg);
+          transform: translateX(2px) translateY(12px) rotate(90deg);
+  width: 28px;
+}
+.si-bottomarrow:before {
+  -webkit-transform: translateX(12px) translateY(6px) rotate(-45deg);
+          transform: translateX(12px) translateY(6px) rotate(-45deg);
+}
+.si-bottomarrow:after {
+  -webkit-transform: translateX(12px) translateY(-6px) rotate(45deg);
+          transform: translateX(12px) translateY(-6px) rotate(45deg);
+}
+.si-circle,
+.si-circleo {
+  height: 32px;
+  border-radius: 50%;
+}
+.si-circleo {
+  border: 3px solid black;
+}
+.si-circleo:hover {
+  border-color: #999;
+}
+/* Page layout
+   ========================================================================== */
 body {
   text-align: center;
   font-family: sans-serif;
@@ -474,8 +759,9 @@ header {
 }
 .test ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,448 +784,18 @@ header {
   cursor: pointer;
 }
 .test li:hover {
-  background-color: yellow;
+  background-color: #d6f4fd;
 }
 .example {
   padding: 2em 1em;
-  background-color: #292933;
+  background-color: black;
 }
 pre,
 code {
   font-size: 13px;
   padding: 0;
-  color: yellow;
+  color: white;
   margin: 0;
   line-height: 1.4em;
   white-space: pre-wrap;
 }
-.si {
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-  cursor: pointer;
-}
-.si span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-}
-.si a {
-  -webkit-transition: ease-in-out all 0.25s;
-  transition: ease-in-out all 0.25s;
-}
-.si a:before,
-.si a:after {
-  -webkit-transition: ease-in-out all 0.25s;
-  transition: ease-in-out all 0.25s;
-}
-.si .si-cross,
-.si .si-plus,
-.si .si-top,
-.si .si-right,
-.si .si-bottom,
-.si .si-left,
-.si .si-circle,
-.si .si-circleo {
-  background-color: transparent;
-}
-.si:hover [class^="si-"] {
-  background-color: #999;
-}
-.si:hover [class^="si-"]:before,
-.si:hover [class^="si-"]:after {
-  background-color: #999;
-}
-.si:hover .si-cross,
-.si:hover .si-plus,
-.si:hover .si-top,
-.si:hover .si-right,
-.si:hover .si-bottom,
-.si:hover .si-left {
-  background-color: transparent;
-}
-[class^="si-"] {
-  position: relative;
-  display: block;
-  background-color: black;
-  width: 32px;
-  height: 4px;
-}
-[class^="si-"]:before,
-[class^="si-"]:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 32px;
-  height: 4px;
-  background-color: black;
-}
-.si-nav {
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
-}
-.si-nav:before {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-}
-.si-nav:after {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-}
-.si-cross {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
-.si-cross:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.si-cross:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.si-plus {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-  -webkit-transform: rotate(45deg) translateX(10px) translateY(10px);
-          transform: rotate(45deg) translateX(10px) translateY(10px);
-}
-.si-plus:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.si-plus:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.si-top {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
-.si-top:before {
-  -webkit-transform: translateX(-1px) rotate(-45deg);
-          transform: translateX(-1px) rotate(-45deg);
-  width: 21px;
-}
-.si-top:after {
-  -webkit-transform: translateX(11.66666667px) rotate(45deg);
-          transform: translateX(11.66666667px) rotate(45deg);
-  width: 21px;
-}
-.si-right {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
-.si-right:before {
-  -webkit-transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
-          transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
-  width: 21px;
-}
-.si-right:after {
-  -webkit-transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
-          transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
-  width: 21px;
-}
-.si-bottom {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
-.si-bottom:before {
-  -webkit-transform: translateX(-1px) rotate(45deg);
-          transform: translateX(-1px) rotate(45deg);
-  width: 21px;
-}
-.si-bottom:after {
-  -webkit-transform: translateX(11.66666667px) rotate(-45deg);
-          transform: translateX(11.66666667px) rotate(-45deg);
-  width: 21px;
-}
-.si-left {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
-.si-left:before {
-  -webkit-transform: translateX(5px) translateY(-6px) rotate(-45deg);
-          transform: translateX(5px) translateY(-6px) rotate(-45deg);
-  width: 21px;
-}
-.si-left:after {
-  -webkit-transform: translateX(5px) translateY(6px) rotate(45deg);
-          transform: translateX(5px) translateY(6px) rotate(45deg);
-  width: 21px;
-}
-.si-toparrow {
-  -webkit-transform: translateX(2px) translateY(16px) rotate(90deg);
-          transform: translateX(2px) translateY(16px) rotate(90deg);
-  width: 28px;
-}
-.si-toparrow:before {
-  -webkit-transform: translateX(-6px) translateY(6px) rotate(45deg);
-          transform: translateX(-6px) translateY(6px) rotate(45deg);
-  width: 21px;
-}
-.si-toparrow:after {
-  -webkit-transform: translateX(-6px) translateY(-6px) rotate(-45deg);
-          transform: translateX(-6px) translateY(-6px) rotate(-45deg);
-  width: 21px;
-}
-.si-rightarrow {
-  width: 28px;
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
-.si-rightarrow:before {
-  -webkit-transform: translateX(13px) translateY(-6px) rotate(45deg);
-          transform: translateX(13px) translateY(-6px) rotate(45deg);
-  width: 21px;
-}
-.si-rightarrow:after {
-  -webkit-transform: translateX(13px) translateY(6px) rotate(-45deg);
-          transform: translateX(13px) translateY(6px) rotate(-45deg);
-  width: 21px;
-}
-.si-leftarrow {
-  width: 28px;
-  -webkit-transform: translateX(4px) translateY(14px);
-          transform: translateX(4px) translateY(14px);
-}
-.si-leftarrow:before {
-  -webkit-transform: translateX(-6px) translateY(-6px) rotate(-45deg);
-          transform: translateX(-6px) translateY(-6px) rotate(-45deg);
-  width: 21px;
-}
-.si-leftarrow:after {
-  -webkit-transform: translateX(-6px) translateY(6px) rotate(45deg);
-          transform: translateX(-6px) translateY(6px) rotate(45deg);
-  width: 21px;
-}
-/*
-.si {
-    display: inline-block;
-    // change this value to increase o reduce the icon size
-    transform: scale(1);
-    padding: @gap-main 0;
-    cursor: pointer;
-    //background-color: orange;
-   // overflow: hidden;
-    span {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        border: 0;
-        clip: rect(0, 0, 0,0);
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-    }
-    a {
-        transition: ease-in-out all .250s;
-        &:before,
-        &:after {
-            transition: ease-in-out all .250s;
-        }
-    }
-    .si-cross,
-    .si-top,
-    .si-right,
-    .si-bottom,
-    .si-left,
-    .si-circle,
-    .si-circleo {
-        background-color: transparent;
-    }
-    .si-circle,
-    .si-circleo {
-        &:after {
-            background-color: transparent;
-        }
-    }
-    &:hover {
-        [class^="si-"] {
-            background-color: #999;
-            &:before,
-            &:after {
-                background-color: #999;
-            }
-        }
-        .si-cross,
-        .si-top,
-        .si-right,
-        .si-bottom,
-        .si-left {
-            background-color: transparent;
-        }
-        .si-circle{
-            background-color: transparent;
-            &:after,{
-                background-color: transparent;
-            }
-        }
-
-        .si-circleo {
-            background-color: transparent;
-            &:after,&:before {
-                background-color: transparent;
-            }
-        }
-    }
-}
-
-[class^="si-"]{
-    position: relative;
-    display: block;
-    height: @height-main;
-    width: @width-main;
-    background-color: @color-main;
-    &:before,
-    &:after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: @width-main;
-        height: @height-main;
-        background-color: @color-main;
-    }
-}
-
-
-.si-nav {
-    &:before {
-        transform: translateY(-@gap-main;);
-    }
-    &:after{
-        transform: translateY(@gap-main;);
-    }
-}
-
-.si-cross {
-    &:before {
-        transform: translateX(0px)  rotate(45deg);
-    }
-    &:after {
-        transform: translateX(0px)  rotate(-45deg);
-    }
-}
-
-.si-top {
-    &:before {
-        transform: translateX(-1px) translateY(0) rotate(-45deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(@gap-main+1.5) translateY(0)  rotate(45deg);
-        width: @width-main / 1.5;
-    }
-}
-.si-toparrow {
-    transform: rotate(90deg);
-    &:before {
-        transform: translateX(-3px) translateY(@gap-main/1.5) rotate(-135deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(-3px) translateY(-@gap-main/1.5)  rotate(135deg);
-        width: @width-main / 1.5;
-    }
-}
-
-.si-right{
-    &:before {
-        transform: translateX(@gap-main/2) translateY(-@gap-main + 3)  rotate(45deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(@gap-main/2) translateY(@gap-main - 3;) rotate(-45deg);
-        width: @width-main / 1.5;
-    }
-}
-.si-rightarrow {
-    &:before {
-        transform: translateX(@gap-main + 3) translateY(-@gap-main + 3)  rotate(45deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(@gap-main + 3) translateY(@gap-main - 3;) rotate(-45deg);
-        width: @width-main / 1.5;
-    }
-}
-
-.si-bottom{
-    &:before {
-        transform: translateX(-1px) translateY(0) rotate(45deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(@gap-main+1.5) translateY(0)  rotate(-45deg);
-        width: @width-main / 1.5;
-    }
-}
-.si-bottomarrow {
-    transform: rotate(90deg);
-    &:before {
-        transform: translateX(@gap-main + 3) translateY(@gap-main - 3) rotate(135deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(@gap-main + 3) translateY(-@gap-main + 3) rotate(-135deg);
-        width: @width-main / 1.5;
-    }
-}
-
-.si-left {
-    &:before {
-        transform: translateX(@gap-main/2) translateY(-@gap-main + 3)  rotate(-45deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(@gap-main/2) translateY(@gap-main - 3;) rotate(45deg);
-        width: @width-main / 1.5;
-    }
-}
-.si-leftarrow {
-    &:before {
-        transform: translateX(-3px) translateY(-@gap-main + 3)  rotate(-45deg);
-        width: @width-main / 1.5;
-    }
-    &:after {
-        transform: translateX(-3px) translateY(@gap-main - 3;) rotate(45deg);
-        width: @width-main / 1.5;
-    }
-}
-
-
-.si-plus {
-    &:after {
-        transform: translateX(0px)  rotate(90deg);
-    }
-}
-
-.si-circle {
-    &:before{
-        height: @width-main;
-        border-radius: 50%;
-        transform: translateY(-@gap-main * 1.25);
-    }
-}
-.si-circleo {
-    &:before{
-        background-color: transparent;
-        border: 3px solid @color-main;
-        height: @width-main;
-        border-radius: 50%;
-        transform: translateY(-@gap-main * 1.25);
-    }
-    &:hover {
-        background-color: transparent;
-        &:before{
-            background-color: transparent;
-            border-color: @color-alt;
-        }
-    }
-}
-*/
