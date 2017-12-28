@@ -108,7 +108,6 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
 	});
 
 	__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.test li').click(function () {
-
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.test li').removeClass('is-selected');
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('is-selected');
 		var classTest = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.is-selected span').text();

@@ -455,12 +455,12 @@ template {
    Sia - Simple Icon Animation
    ========================================================================== */
 /*
- * Create an animation on links
+ * Create animated icons on links
  *
  * Html example:
  * -----------------------------------------------------------------------------
  * <div class="si">
- *      <a class="si-nav" href="#"><span>hide/show navigation</span></a>
+ *      <a class="si-nav" href="#"><span>show/hide navigation</span></a>
  * </div>
  */
 /* Variables
@@ -468,95 +468,95 @@ template {
 /* Common classes
    ========================================================================== */
 .transparent,
-.si .si-cross,
-.si .si-plus,
-.si .si-check,
-.si .si-search,
-.si .si-top,
-.si .si-right,
-.si .si-bottom,
-.si .si-left,
-.si .si-circleo,
-.si .si-minus:before,
-.si .si-circle:before,
-.si .si-circleo:before,
-.si .si-minus:after,
-.si .si-circle:after,
-.si .si-circleo:after,
-.si .si-search:after,
-.si:hover .si-cross,
-.si:hover .si-plus,
-.si:hover .si-check,
-.si:hover .si-search,
-.si:hover .si-top,
-.si:hover .si-right,
-.si:hover .si-bottom,
-.si:hover .si-left,
-.si:hover .si-circleo,
-.si:hover .si-minus:before,
-.si:hover .si-circle:before,
-.si:hover .si-circleo:before,
-.si:hover .si-minus:after,
-.si:hover .si-circle:after,
-.si:hover .si-circleo:after,
-.si:hover .si-search:after {
+.sia .sia-cross,
+.sia .sia-plus,
+.sia .sia-check,
+.sia .sia-search,
+.sia .sia-top,
+.sia .sia-right,
+.sia .sia-bottom,
+.sia .sia-left,
+.sia .sia-circleo,
+.sia .sia-minus:before,
+.sia .sia-circle:before,
+.sia .sia-circleo:before,
+.sia .sia-minus:after,
+.sia .sia-circle:after,
+.sia .sia-circleo:after,
+.sia .sia-search:after,
+.sia:hover .sia-cross,
+.sia:hover .sia-plus,
+.sia:hover .sia-check,
+.sia:hover .sia-search,
+.sia:hover .sia-top,
+.sia:hover .sia-right,
+.sia:hover .sia-bottom,
+.sia:hover .sia-left,
+.sia:hover .sia-circleo,
+.sia:hover .sia-minus:before,
+.sia:hover .sia-circle:before,
+.sia:hover .sia-circleo:before,
+.sia:hover .sia-minus:after,
+.sia:hover .sia-circle:after,
+.sia:hover .sia-circleo:after,
+.sia:hover .sia-search:after {
   background-color: transparent !important;
 }
 .color-hover,
-.si:hover [class^="si-"],
-.si:hover [class^="si-"]:before,
-.si:hover [class^="si-"]:after {
+.sia:hover [class^="sia-"],
+.sia:hover [class^="sia-"]:before,
+.sia:hover [class^="sia-"]:after {
   background-color: #999;
 }
 .transition,
-.si [class^="si-"],
-.si [class^="si-"]:before,
-.si [class^="si-"]:after {
+.sia [class^="sia-"],
+.sia [class^="sia-"]:before,
+.sia [class^="sia-"]:after {
   -webkit-transition: ease-in-out all 0.25s;
   transition: ease-in-out all 0.25s;
 }
 .center,
-.si-cross,
-.si-plus,
-.si-minus,
-.si-check,
-.si-top,
-.si-right,
-.si-bottom,
-.si-left,
-.si-rightarrow {
+.sia-cross,
+.sia-plus,
+.sia-minus,
+.sia-check,
+.sia-top,
+.sia-right,
+.sia-bottom,
+.sia-left,
+.sia-rightarrow {
   -webkit-transform: translateY(14px);
           transform: translateY(14px);
 }
 .icon-width-mini,
-.si-check:after,
-.si-top:before,
-.si-top:after,
-.si-right:before,
-.si-right:after,
-.si-bottom:before,
-.si-bottom:after,
-.si-left:before,
-.si-left:after,
-.si-toparrow:before,
-.si-toparrow:after,
-.si-rightarrow:before,
-.si-rightarrow:after,
-.si-leftarrow:before,
-.si-leftarrow:after,
-.si-bottomarrow:before,
-.si-bottomarrow:after {
+.sia-check:after,
+.sia-top:before,
+.sia-top:after,
+.sia-right:before,
+.sia-right:after,
+.sia-bottom:before,
+.sia-bottom:after,
+.sia-left:before,
+.sia-left:after,
+.sia-toparrow:before,
+.sia-toparrow:after,
+.sia-rightarrow:before,
+.sia-rightarrow:after,
+.sia-leftarrow:before,
+.sia-leftarrow:after,
+.sia-bottomarrow:before,
+.sia-bottomarrow:after {
   width: 21px !important;
 }
 /* Icon container
    ========================================================================== */
-.si {
+.sia {
   display: inline-block;
   height: 32px;
   width: 32px;
   cursor: pointer;
 }
-.si span {
+.sia span {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -566,20 +566,20 @@ template {
   padding: 0;
   overflow: hidden;
 }
-.si:hover .si-search {
+.sia:hover .sia-search {
   border-color: #999;
 }
 /* Common icon
    ========================================================================== */
-[class^="si-"] {
+[class^="sia-"] {
   display: block;
   position: relative;
   width: 32px;
   height: 4px;
   background-color: black;
 }
-[class^="si-"]:before,
-[class^="si-"]:after {
+[class^="sia-"]:before,
+[class^="sia-"]:after {
   content: "";
   position: absolute;
   display: block;
@@ -589,144 +589,141 @@ template {
 }
 /* Icons
    ========================================================================== */
-.si-nav {
+.sia-nav {
   -webkit-transform: translateY(14px);
           transform: translateY(14px);
 }
-.si-nav:before {
+.sia-nav:before {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
-.si-nav:after {
+.sia-nav:after {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
-.si-cross:before {
+.sia-cross:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.si-cross:after {
+.sia-cross:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.si-plus:before {
+.sia-plus:before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.si-check:before {
+.sia-check:before {
   -webkit-transform: translateX(4px) translateY(4px) rotate(45deg);
           transform: translateX(4px) translateY(4px) rotate(45deg);
   width: 10.5px;
 }
-.si-check:after {
+.sia-check:after {
   -webkit-transform: translateX(8px) rotate(-45deg);
           transform: translateX(8px) rotate(-45deg);
 }
-.si-search {
+.sia-search {
   height: 25.6px;
   width: 25.6px;
   border-radius: 50%;
   border: 3px solid black;
 }
-.si-search:hover {
-  border-color: #999;
-}
-.si-search:before {
+.sia-search:before {
   -webkit-transform: translateX(16px) translateY(21px) rotate(45deg);
           transform: translateX(16px) translateY(21px) rotate(45deg);
   width: 14px;
 }
-.si-top:before {
+.sia-top:before {
   -webkit-transform: translateX(-1px) rotate(-45deg);
           transform: translateX(-1px) rotate(-45deg);
 }
-.si-top:after {
+.sia-top:after {
   -webkit-transform: translateX(11.66666667px) rotate(45deg);
           transform: translateX(11.66666667px) rotate(45deg);
 }
-.si-right:before {
+.sia-right:before {
   -webkit-transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
           transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
 }
-.si-right:after {
+.sia-right:after {
   -webkit-transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
           transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
 }
-.si-bottom:before {
+.sia-bottom:before {
   -webkit-transform: translateX(-1px) rotate(45deg);
           transform: translateX(-1px) rotate(45deg);
 }
-.si-bottom:after {
+.sia-bottom:after {
   -webkit-transform: translateX(11.66666667px) rotate(-45deg);
           transform: translateX(11.66666667px) rotate(-45deg);
 }
-.si-left:before {
+.sia-left:before {
   -webkit-transform: translateX(5px) translateY(-6px) rotate(-45deg);
           transform: translateX(5px) translateY(-6px) rotate(-45deg);
 }
-.si-left:after {
+.sia-left:after {
   -webkit-transform: translateX(5px) translateY(6px) rotate(45deg);
           transform: translateX(5px) translateY(6px) rotate(45deg);
 }
-.si-toparrow {
+.sia-toparrow {
   -webkit-transform: translateX(2px) translateY(16px) rotate(90deg);
           transform: translateX(2px) translateY(16px) rotate(90deg);
   width: 28px;
 }
-.si-toparrow:before {
+.sia-toparrow:before {
   -webkit-transform: translateX(-5.25px) translateY(6px) rotate(45deg);
           transform: translateX(-5.25px) translateY(6px) rotate(45deg);
 }
-.si-toparrow:after {
+.sia-toparrow:after {
   -webkit-transform: translateX(-5.25px) translateY(-6px) rotate(-45deg);
           transform: translateX(-5.25px) translateY(-6px) rotate(-45deg);
 }
-.si-rightarrow {
+.sia-rightarrow {
   width: 28px;
 }
-.si-rightarrow:before {
+.sia-rightarrow:before {
   -webkit-transform: translateX(13px) translateY(-6px) rotate(45deg);
           transform: translateX(13px) translateY(-6px) rotate(45deg);
 }
-.si-rightarrow:after {
+.sia-rightarrow:after {
   -webkit-transform: translateX(13px) translateY(6px) rotate(-45deg);
           transform: translateX(13px) translateY(6px) rotate(-45deg);
 }
-.si-leftarrow {
+.sia-leftarrow {
   -webkit-transform: translateX(4px) translateY(14px);
           transform: translateX(4px) translateY(14px);
   width: 28px;
 }
-.si-leftarrow:before {
+.sia-leftarrow:before {
   -webkit-transform: translateX(-6px) translateY(-6px) rotate(-45deg);
           transform: translateX(-6px) translateY(-6px) rotate(-45deg);
 }
-.si-leftarrow:after {
+.sia-leftarrow:after {
   -webkit-transform: translateX(-6px) translateY(6px) rotate(45deg);
           transform: translateX(-6px) translateY(6px) rotate(45deg);
 }
-.si-bottomarrow {
+.sia-bottomarrow {
   -webkit-transform: translateX(2px) translateY(12px) rotate(90deg);
           transform: translateX(2px) translateY(12px) rotate(90deg);
   width: 28px;
 }
-.si-bottomarrow:before {
+.sia-bottomarrow:before {
   -webkit-transform: translateX(12px) translateY(6px) rotate(-45deg);
           transform: translateX(12px) translateY(6px) rotate(-45deg);
 }
-.si-bottomarrow:after {
+.sia-bottomarrow:after {
   -webkit-transform: translateX(12px) translateY(-6px) rotate(45deg);
           transform: translateX(12px) translateY(-6px) rotate(45deg);
 }
-.si-circle,
-.si-circleo {
+.sia-circle,
+.sia-circleo {
   height: 32px;
   border-radius: 50%;
 }
-.si-circleo {
+.sia-circleo {
   border: 3px solid black;
 }
-.si-circleo:hover {
+.sia-circleo:hover {
   border-color: #999;
 }
 /* Page layout
@@ -743,19 +740,22 @@ body {
   padding: 0;
   margin: 0;
 }
-.name {
+header {
+  margin: 3em 1em 0;
+}
+header h1 {
+  margin-bottom: 0;
+}
+header h1 + p {
+  margin-bottom: 2em;
   color: #999;
 }
-header {
-  margin: 3em 1em;
-}
 .test {
-  background-color: #f5f5f5;
   padding: 2em 1.5em;
 }
-.test .si {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+.test .sia {
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+          transform: scale3d(0.5, 0.5, 0.5);
 }
 .test ul {
   list-style-type: none;
@@ -779,12 +779,28 @@ header {
           flex-grow: 1;
   margin: 0;
   padding: 1em;
-  border: 1px solid #f0f0f0;
-  background-color: white;
+  border: 3px solid white;
+  background-color: #0734fa;
   cursor: pointer;
 }
+.test li [class^="sia-"] {
+  background-color: white;
+  border-color: white;
+}
+.test li [class^="sia-"]:after,
+.test li [class^="sia-"]:before {
+  background-color: white;
+}
 .test li:hover {
-  background-color: #d6f4fd;
+  background-color: rebeccapurple;
+}
+.test li:hover [class^="sia-"] {
+  background-color: white;
+  border-color: white;
+}
+.test li:hover [class^="sia-"]:after,
+.test li:hover [class^="sia-"]:before {
+  background-color: white;
 }
 .example {
   padding: 2em 1em;

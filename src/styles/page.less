@@ -9,21 +9,21 @@ body {
     margin: 0;
 }
 
-.name {
-    color: #999;
-}
-
 header {
-    margin: 3em 1em;
+    margin: 3em 1em 0;
+    h1 {
+        margin-bottom: 0;
+        &+ p {
+            margin-bottom: 2em;
+            color: #999;
+        }
+    }
 }
 
 .test {
-    background-color: #f5f5f5;
     padding: 2em 1.5em;
-    .si {
-        transform: scale(.5);
-    }
-    [class^="si-"]{
+    .sia {
+        .16x;
     }
     ul {
         list-style-type: none;
@@ -38,17 +38,33 @@ header {
         flex-grow: 1;
         margin: 0;
         padding: 1em;
-        border: 1px solid #f0f0f0;
-        background-color: white;
+        border: 3px solid white;
+        background-color: rgb(7, 52, 250);
+        [class^="sia-"]{
+            background-color: white;
+            border-color: white;
+            &:after,
+            &:before {
+                background-color: white;
+            }
+        }
         cursor: pointer;
         &:hover {
-            background-color: rgb(214, 244, 253);
+            background-color: rebeccapurple;
+            [class^="sia-"]{
+                background-color: white;
+                border-color: white;
+                &:after,
+                &:before {
+                    background-color: white;
+                }
+            }
         }
     }
 }
 .example {
     padding: 2em 1em;
-    background-color: @color-main;
+    background-color: black;
 }
 pre,
 code {
