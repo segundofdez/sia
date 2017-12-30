@@ -512,10 +512,11 @@ template {
 .sia [class^="sia-"],
 .sia [class^="sia-"]:before,
 .sia [class^="sia-"]:after {
-  -webkit-transition: ease-in-out all 0.25s;
-  transition: ease-in-out all 0.25s;
+  -webkit-transition: ease-in all 0.25s;
+  transition: ease-in all 0.25s;
 }
 .center,
+.sia-nav,
 .sia-cross,
 .sia-plus,
 .sia-minus,
@@ -546,7 +547,7 @@ template {
 .sia-leftarrow:after,
 .sia-bottomarrow:before,
 .sia-bottomarrow:after {
-  width: 21px !important;
+  width: 22px !important;
 }
 /* Icon container
    ========================================================================== */
@@ -589,17 +590,13 @@ template {
 }
 /* Icons
    ========================================================================== */
-.sia-nav {
-  -webkit-transform: translateY(14px);
-          transform: translateY(14px);
-}
 .sia-nav:before {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(9.14285714px);
+          transform: translateY(9.14285714px);
 }
 .sia-nav:after {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  -webkit-transform: translateY(-9.14285714px);
+          transform: translateY(-9.14285714px);
 }
 .sia-cross:before {
   -webkit-transform: rotate(45deg);
@@ -616,7 +613,7 @@ template {
 .sia-check:before {
   -webkit-transform: translateX(4px) translateY(4px) rotate(45deg);
           transform: translateX(4px) translateY(4px) rotate(45deg);
-  width: 10.5px;
+  width: 11px;
 }
 .sia-check:after {
   -webkit-transform: translateX(8px) rotate(-45deg);
@@ -629,9 +626,9 @@ template {
   border: 3px solid black;
 }
 .sia-search:before {
-  -webkit-transform: translateX(16px) translateY(21px) rotate(45deg);
-          transform: translateX(16px) translateY(21px) rotate(45deg);
-  width: 14px;
+  -webkit-transform: translateX(16px) translateY(22px) rotate(45deg);
+          transform: translateX(16px) translateY(22px) rotate(45deg);
+  width: 14.66666667px;
 }
 .sia-top:before {
   -webkit-transform: translateX(-1px) rotate(-45deg);
@@ -642,12 +639,12 @@ template {
           transform: translateX(11.66666667px) rotate(45deg);
 }
 .sia-right:before {
-  -webkit-transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
-          transform: translateX(6.66666667px) translateY(-6px) rotate(45deg);
+  -webkit-transform: translateX(5.33333333px) translateY(-6.4px) rotate(45deg);
+          transform: translateX(5.33333333px) translateY(-6.4px) rotate(45deg);
 }
 .sia-right:after {
-  -webkit-transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
-          transform: translateX(6.66666667px) translateY(6px) rotate(-45deg);
+  -webkit-transform: translateX(5.33333333px) translateY(6.4px) rotate(-45deg);
+          transform: translateX(5.33333333px) translateY(6.4px) rotate(-45deg);
 }
 .sia-bottom:before {
   -webkit-transform: translateX(-1px) rotate(45deg);
@@ -658,28 +655,29 @@ template {
           transform: translateX(11.66666667px) rotate(-45deg);
 }
 .sia-left:before {
-  -webkit-transform: translateX(5px) translateY(-6px) rotate(-45deg);
-          transform: translateX(5px) translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateX(5.33333333px) translateY(-6.4px) rotate(-45deg);
+          transform: translateX(5.33333333px) translateY(-6.4px) rotate(-45deg);
 }
 .sia-left:after {
-  -webkit-transform: translateX(5px) translateY(6px) rotate(45deg);
-          transform: translateX(5px) translateY(6px) rotate(45deg);
+  -webkit-transform: translateX(5.33333333px) translateY(6.4px) rotate(45deg);
+          transform: translateX(5.33333333px) translateY(6.4px) rotate(45deg);
 }
 .sia-toparrow {
-  -webkit-transform: translateX(2px) translateY(16px) rotate(90deg);
-          transform: translateX(2px) translateY(16px) rotate(90deg);
-  width: 28px;
+  -webkit-transform: translateY(14px) rotate(90deg);
+          transform: translateY(14px) rotate(90deg);
 }
 .sia-toparrow:before {
-  -webkit-transform: translateX(-5.25px) translateY(6px) rotate(45deg);
-          transform: translateX(-5.25px) translateY(6px) rotate(45deg);
+  -webkit-transform: translateX(-2px) translateY(6.33333333px) rotate(45deg);
+          transform: translateX(-2px) translateY(6.33333333px) rotate(45deg);
+  background-color: white;
 }
 .sia-toparrow:after {
-  -webkit-transform: translateX(-5.25px) translateY(-6px) rotate(-45deg);
-          transform: translateX(-5.25px) translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateX(-2px) translateY(-6.28571429px) rotate(-45deg);
+          transform: translateX(-2px) translateY(-6.28571429px) rotate(-45deg);
+  background-color: orange;
 }
 .sia-rightarrow {
-  width: 28px;
+  width: 29.33333333px;
 }
 .sia-rightarrow:before {
   -webkit-transform: translateX(13px) translateY(-6px) rotate(45deg);
@@ -692,28 +690,28 @@ template {
 .sia-leftarrow {
   -webkit-transform: translateX(4px) translateY(14px);
           transform: translateX(4px) translateY(14px);
-  width: 28px;
+  width: 29.33333333px;
 }
 .sia-leftarrow:before {
-  -webkit-transform: translateX(-6px) translateY(-6px) rotate(-45deg);
-          transform: translateX(-6px) translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateX(-6.33333333px) translateY(-6px) rotate(-45deg);
+          transform: translateX(-6.33333333px) translateY(-6px) rotate(-45deg);
 }
 .sia-leftarrow:after {
-  -webkit-transform: translateX(-6px) translateY(6px) rotate(45deg);
-          transform: translateX(-6px) translateY(6px) rotate(45deg);
+  -webkit-transform: translateX(-6.33333333px) translateY(6px) rotate(45deg);
+          transform: translateX(-6.33333333px) translateY(6px) rotate(45deg);
 }
 .sia-bottomarrow {
   -webkit-transform: translateX(2px) translateY(12px) rotate(90deg);
           transform: translateX(2px) translateY(12px) rotate(90deg);
-  width: 28px;
+  width: 29.33333333px;
 }
 .sia-bottomarrow:before {
   -webkit-transform: translateX(12px) translateY(6px) rotate(-45deg);
           transform: translateX(12px) translateY(6px) rotate(-45deg);
 }
 .sia-bottomarrow:after {
-  -webkit-transform: translateX(12px) translateY(-6px) rotate(45deg);
-          transform: translateX(12px) translateY(-6px) rotate(45deg);
+  -webkit-transform: translateX(12px) translateY(-6.33333333px) rotate(45deg);
+          transform: translateX(12px) translateY(-6.33333333px) rotate(45deg);
 }
 .sia-circle,
 .sia-circleo {
@@ -741,12 +739,21 @@ body {
   margin: 0;
 }
 header {
-  margin: 3em 1em 0;
+  margin: 2em 1em 0;
+}
+header .sia {
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  cursor: default;
 }
 header h1 {
-  margin-bottom: 0;
+  margin: 0;
+  font-size: 3em;
+  line-height: 1em;
 }
 header h1 + p {
+  font-size: 14px;
   margin-bottom: 2em;
   color: #999;
 }
@@ -756,6 +763,8 @@ header h1 + p {
 .test .sia {
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
           transform: scale3d(0.5, 0.5, 0.5);
+  margin: 0 auto;
+  display: block;
 }
 .test ul {
   list-style-type: none;
@@ -769,6 +778,9 @@ header h1 + p {
   -webkit-box-direction: normal;
               -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-align: center;
+              -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
               -ms-flex-pack: center;
           justify-content: center;
@@ -777,7 +789,6 @@ header h1 + p {
   -webkit-box-flex: 1;
               -ms-flex-positive: 1;
           flex-grow: 1;
-  margin: 0;
   padding: 1em;
   border: 3px solid white;
   background-color: #0734fa;
@@ -792,7 +803,7 @@ header h1 + p {
   background-color: white;
 }
 .test li:hover {
-  background-color: rebeccapurple;
+  background-color: #0707b8;
 }
 .test li:hover [class^="sia-"] {
   background-color: white;
@@ -801,17 +812,4 @@ header h1 + p {
 .test li:hover [class^="sia-"]:after,
 .test li:hover [class^="sia-"]:before {
   background-color: white;
-}
-.example {
-  padding: 2em 1em;
-  background-color: black;
-}
-pre,
-code {
-  font-size: 13px;
-  padding: 0;
-  color: white;
-  margin: 0;
-  line-height: 1.4em;
-  white-space: pre-wrap;
 }

@@ -10,20 +10,36 @@ body {
 }
 
 header {
-    margin: 3em 1em 0;
+    margin: 2em 1em 0;
+    .sia {
+        display: block;
+        margin: 0 auto;
+        pointer-events: none;
+        cursor: default;
+    }
     h1 {
-        margin-bottom: 0;
+        margin: 0;
+        font-size: 3em;
+        line-height: 1em;
         &+ p {
+            font-size: 14px;
             margin-bottom: 2em;
-            color: #999;
+           color: #999;
         }
     }
+}
+.name {
+    //color: rgb(7, 52, 250);
 }
 
 .test {
     padding: 2em 1.5em;
     .sia {
         .16x;
+        margin: 0 auto;
+        display: block;
+       // background-color: yellow;
+       // margin-top: 10px;
     }
     ul {
         list-style-type: none;
@@ -32,11 +48,11 @@ header {
         max-width: 500px;
         display: flex;
         flex-flow: row wrap;
+        align-items: center;
         justify-content: center;
     }
     li {
         flex-grow: 1;
-        margin: 0;
         padding: 1em;
         border: 3px solid white;
         background-color: rgb(7, 52, 250);
@@ -50,7 +66,7 @@ header {
         }
         cursor: pointer;
         &:hover {
-            background-color: rebeccapurple;
+            background-color: rgb(7, 7, 184);
             [class^="sia-"]{
                 background-color: white;
                 border-color: white;
@@ -62,17 +78,3 @@ header {
         }
     }
 }
-.example {
-    padding: 2em 1em;
-    background-color: black;
-}
-pre,
-code {
-    font-size: 13px;
-    padding: 0;
-    color: white;
-    margin: 0;
-    line-height: 1.4em;
-    white-space: pre-wrap;
-}
-

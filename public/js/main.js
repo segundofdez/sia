@@ -82,31 +82,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
-	var icons = ["nav", "cross", "plus", "minus", "check", "search", "top", "right", "bottom", "left", "toparrow", "rightarrow", "bottomarrow", "leftarrow", "circle", "circleo"];
-
-	var content = document.querySelectorAll('header div');
-
-	Array.prototype.forEach.call(content, function (div) {
-		div.addEventListener('click', function () {
-			var index = div.dataset.index;
-			var className = icons[index];
-			var link = div.querySelector('a');
-
-			var pieces = link.getAttribute('class').split('-');
-
-			++index;
-
-			if (icons[index] === undefined) {
-				index = 0;
-			}
-
-			pieces[1] = icons[index];
-			link.setAttribute('class', pieces.join('-'));
-			div.dataset.index = index;
-			document.querySelector('.name').innerHTML = '.' + pieces.join('-');
-		});
-	});
-
 	__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.test li').click(function () {
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.test li').removeClass('is-selected');
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('is-selected');
@@ -116,6 +91,9 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('header a').addClass(classTest);
 
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.name').text("." + classTest);
+
+		event.preventDefault();
+		event.stopPropagation();
 	});
 });
 
