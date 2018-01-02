@@ -555,6 +555,15 @@ template {
 .sia-bottomarrow:after {
   width: 22px !important;
 }
+.line,
+[class^="sia-"],
+[class^="sia-"]:before,
+[class^="sia-"]:after {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: black;
+}
 /* Icon container
    ========================================================================== */
 .sia {
@@ -579,20 +588,12 @@ template {
 /* Common icon
    ========================================================================== */
 [class^="sia-"] {
-  display: block;
   position: relative;
-  width: 32px;
-  height: 4px;
-  background-color: black;
 }
 [class^="sia-"]:before,
 [class^="sia-"]:after {
   content: "";
   position: absolute;
-  display: block;
-  width: 32px;
-  height: 4px;
-  background-color: black;
 }
 /* Icons
    ========================================================================== */

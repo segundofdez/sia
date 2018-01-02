@@ -37,7 +37,7 @@
     transition: ease-in all .250s;
 }
 .border-radius {
-    border-radius: @border-radius; 
+    border-radius: @border-radius;
 }
 .center {
     transform: translateY(@icon-height/2 - @main-height/2);
@@ -45,6 +45,13 @@
 .icon-width-mini {
     width: @icon-width-mini !important;
 }
+.line {
+    display: block;
+    width: @icon-width;
+    height: @main-height;
+    background-color: @color-main;
+}
+
 .16x() {
     transform: scale3d(.5,.5,.5);
 }
@@ -104,8 +111,9 @@
     }
     &:hover {
         [class^="sia-"]:extend(.color-hover) {
-            &:before:extend(.color-hover),
-            &:after:extend(.color-hover) {
+            &:before,
+            &:after {
+                &:extend(.color-hover);
             }
         }
         .sia-cross:extend(.transparent),
@@ -136,21 +144,15 @@
 /* Common icon
    ========================================================================== */
 [class^="sia-"] {
-    display: block;
     position: relative;
-    width: @icon-width;
-    height: @main-height;
-    background-color: @color-main;
+    &:extend(.line);
     &:extend(.border-radius);
     &:before,
     &:after {
-            &:extend(.border-radius);
+        &:extend(.line);
+        &:extend(.border-radius);
         content: "";
         position: absolute;
-        display: block;
-        width: @icon-width;
-        height: @main-height;
-        background-color: @color-main;
     }
 }
 
