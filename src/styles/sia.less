@@ -22,7 +22,8 @@
 @icon-width-mini: 22px;
 
 @main-height: @icon-height / 8;
-@main-gap: 10px;
+
+@border-radius: @main-height * 2;
 
 /* Common classes
    ========================================================================== */
@@ -34,6 +35,9 @@
 }
 .transition {
     transition: ease-in all .250s;
+}
+.border-radius {
+    border-radius: @border-radius; 
 }
 .center {
     transform: translateY(@icon-height/2 - @main-height/2);
@@ -55,7 +59,7 @@
     display: inline-block;
     height: @icon-height;
     width: @icon-width;
-    //background-color: red;
+    //background-color: aquamarine;
     cursor: pointer;
     span {
         position: absolute;
@@ -137,8 +141,10 @@
     width: @icon-width;
     height: @main-height;
     background-color: @color-main;
+    &:extend(.border-radius);
     &:before,
     &:after {
+            &:extend(.border-radius);
         content: "";
         position: absolute;
         display: block;
@@ -198,7 +204,7 @@
     border-radius: 50%;
     border: 3px solid @color-main;
     &:before {
-        transform: translateX(@icon-width / 2) translateY(@icon-width-mini) rotate(45deg);
+        transform: translateX(@icon-width / 2) translateY(@icon-width/1.5) rotate(45deg);
         width: @icon-width-mini / 1.5;
     }
 }
@@ -226,10 +232,10 @@
 .sia-bottom {
     &:extend(.center);
     &:before:extend(.icon-width-mini) {
-        transform: translateX(-1px) rotate(45deg);
+        transform: translateX(-1px) rotate(-135deg);
     }
     &:after:extend(.icon-width-mini) {
-        transform: translateX(@icon-width / 3 + 1px) rotate(-45deg);
+        transform: translateX(@icon-width / 3 + 1px) rotate(135deg);
     }
 }
 
@@ -244,56 +250,46 @@
 }
 
 .sia-toparrow {
-    //&:extend(.center);
-    transform: translateY(@icon-height/2 - @main-height/2) rotate(90deg);
+    transform: translateX(@icon-height/16) translateY(@icon-height/2) rotate(90deg);
+    width: @icon-width - @icon-height/8;
     &:before:extend(.icon-width-mini) {
-        transform: translateX(-2px) translateY(@icon-width-mini / 3 - 1px) rotate(45deg);
-        background-color: white;
+        transform: translateX(-@icon-width-mini / 3.5) translateY(@icon-width-mini / 3.5) rotate(45deg);
     }
     &:after:extend(.icon-width-mini) {
-        transform: translateX(-2px) translateY(-@icon-width-mini / 3.5) rotate(-45deg);
-        background-color: orange;
+       transform: translateX(-@icon-width-mini / 3.5) translateY(-@icon-width-mini / 3.5) rotate(-45deg);
     }
-    // transform: translateX(2px) translateY(@main-height + @main-gap + 2px) rotate(90deg);
-    // width: @icon-width-mini + @icon-width-mini / 3;
-    // &:before:extend(.icon-width-mini) {
-    //     transform: translateX(-@icon-width-mini / 4) translateY(@icon-width-mini / 3 - 1px) rotate(45deg);
-    // }
-    // &:after:extend(.icon-width-mini) {
-    //     transform: translateX(-@icon-width-mini / 4) translateY(-@icon-width-mini / 3 + 1px) rotate(-45deg);
-    // }
 }
 
 .sia-rightarrow{
-    width: @icon-width-mini + @icon-width-mini / 3;
+    width: @icon-width - @icon-height/8;
     &:extend(.center);
     &:before:extend(.icon-width-mini) {
-        transform: translateX(@main-gap + 3px) translateY(-@main-gap + @main-height)  rotate(45deg);
+        transform: translateX(@main-height * 3) translateY(-@icon-width-mini / 3.5) rotate(45deg);
     }
     &:after:extend(.icon-width-mini) {
-        transform: translateX(@main-gap + 3px) translateY(@main-gap - @main-height) rotate(-45deg);
+        transform: translateX(@main-height * 3) translateY(@icon-width-mini / 3.5) rotate(-45deg);
     }
 }
 
 .sia-leftarrow{
-    transform: translateX(@main-height) translateY(@main-height + @main-gap);
-    width: @icon-width-mini + @icon-width-mini / 3;
+    transform: translateX(@icon-height/16 + @icon-width/16) translateY(@icon-width/2 - @main-height/2);
+    width: @icon-width - @icon-height/8;
     &:before:extend(.icon-width-mini) {
-        transform: translateX(-@icon-width-mini / 3 + 1px) translateY(-@main-gap + @main-height) rotate(-45deg);
+        transform: translateX(-@icon-width-mini / 3 + 1px) translateY(-@icon-height/5) rotate(-45deg);
     }
     &:after:extend(.icon-width-mini) {
-        transform: translateX(-@icon-width-mini / 3 + 1px) translateY(@main-gap - @main-height )  rotate(45deg);
+        transform: translateX(-@icon-width-mini / 3 + 1px) translateY(@icon-height/5)  rotate(45deg);
     }
 }
 
 .sia-bottomarrow {
-    transform: translateX(2px) translateY(@main-height + @main-gap - 2px) rotate(90deg);
-    width: @icon-width-mini + @icon-width-mini / 3;
+    transform: translateX(@icon-height/16) translateY(@main-height*3) rotate(90deg);
+    width: @icon-width - @icon-height/8;
     &:before:extend(.icon-width-mini) {
-        transform: translateX(@main-gap + 2px) translateY(@main-gap - @main-height) rotate(-45deg);
+        transform: translateX(@icon-width-mini / 2) translateY(@icon-height/5) rotate(-45deg);
     }
     &:after:extend(.icon-width-mini) {
-        transform: translateX(@main-gap + 2px) translateY(-@icon-width-mini / 3 + 1px) rotate(45deg);
+        transform: translateX(@icon-width-mini / 2) translateY(-@icon-height/5) rotate(45deg);
     }
 }
 
