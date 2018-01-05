@@ -105,7 +105,7 @@
         }
     }
     .sia-search {
-        &:after {
+        &:before {
             &:extend(.transparent);
         }
     }
@@ -135,7 +135,7 @@
         }
         .sia-search{
             border-color: @color-hover;
-            &:after:extend(.transparent) {
+            &:before:extend(.transparent) {
             }
         }
     }
@@ -205,7 +205,7 @@
     width: @icon-width / 1.25;
     border-radius: 50%;
     border: 3px solid @color-main;
-    &:before {
+    &:after {
         transform: translateX(@icon-width / 2) translateY(@icon-width/1.5) rotate(45deg);
         width: @icon-width-mini / 1.5;
     }

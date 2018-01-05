@@ -483,7 +483,7 @@ template {
 .sia .sia-minus:after,
 .sia .sia-circle:after,
 .sia .sia-circleo:after,
-.sia .sia-search:after,
+.sia .sia-search:before,
 .sia:hover .sia-cross,
 .sia:hover .sia-plus,
 .sia:hover .sia-check,
@@ -499,7 +499,7 @@ template {
 .sia:hover .sia-minus:after,
 .sia:hover .sia-circle:after,
 .sia:hover .sia-circleo:after,
-.sia:hover .sia-search:after {
+.sia:hover .sia-search:before {
   background-color: transparent !important;
 }
 .color-hover,
@@ -632,7 +632,7 @@ template {
   border-radius: 50%;
   border: 3px solid black;
 }
-.sia-search:before {
+.sia-search:after {
   -webkit-transform: translateX(16px) translateY(21.33333333px) rotate(45deg);
           transform: translateX(16px) translateY(21.33333333px) rotate(45deg);
   width: 14.66666667px;
@@ -732,6 +732,9 @@ template {
 }
 /* Page layout
    ========================================================================== */
+html {
+  background-color: aliceblue;
+}
 body {
   text-align: center;
   font-family: sans-serif;
@@ -796,7 +799,7 @@ header h1 + p {
               -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 1em;
-  border: 3px solid white;
+  border: 3px solid aliceblue;
   background-color: #0734fa;
   cursor: pointer;
 }
