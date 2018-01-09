@@ -87,13 +87,18 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(function () {
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('is-selected');
 		var classTest = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.is-selected span').text();
 
-		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('header a').removeClass();
-		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('header a').addClass(classTest);
+		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('header > .sia a').removeClass();
+		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('header > .sia a').addClass(classTest);
 
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.name').text("." + classTest);
 
-		event.preventDefault();
-		event.stopPropagation();
+		return false;
+	});
+
+	__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.example .sia').click(function () {
+		__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.example .sia a').toggleClass('sia-nav sia-cross');
+
+		return false;
 	});
 });
 

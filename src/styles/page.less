@@ -1,5 +1,4 @@
 html {
-    background-color: aliceblue;
 }
 body {
     text-align: center;
@@ -12,31 +11,67 @@ body {
     margin: 0;
 }
 
+button.sia {
+    border: none;
+    span {
+        display: block !important;
+        position: relative;
+        &:extend(.line);
+        &:extend(.border-radius);
+        &:before,
+        &:after {
+            &:extend(.line);
+            &:extend(.border-radius);
+            content: "";
+            position: absolute;
+        }
+    }
+}
+
 header {
-    margin: 2em 1em 0;
+    padding: 1.5em 1em;
+    background-color: rgb(217, 236, 252);
     .sia {
         display: block;
         margin: 0 auto;
         pointer-events: none;
         cursor: default;
     }
+    .logo {
+        position: fixed;
+        right: -3em;
+        bottom: 7em;
+        text-align: left;
+        color: #adadad;
+        transform: rotate(-90deg);
+        a {
+            margin-left: 2em;
+            color: rgb(7, 52, 250);
+            text-decoration: none;
+            font-size: 13px;
+            &:hover {
+                color: #adadad;
+            }
+        }
+    }
     h1 {
         margin: 0;
-        font-size: 3em;
+        font-size: 1.75em;
         line-height: 1em;
+        color: #222;
         &+ p {
-            font-size: 14px;
-            margin-bottom: 2em;
-           color: #999;
+            margin: 0;
+            font-size: 13px;
+            display: inline-block;
         }
     }
 }
 .name {
-    //color: rgb(7, 52, 250);
+    margin-top: 1em;
 }
 
 .test {
-    padding: 2em 1.5em;
+    margin-top: 1em;
     .sia {
         .16x;
         margin: 0 auto;
@@ -57,7 +92,7 @@ header {
     li {
         flex-grow: 1;
         padding: 1em;
-        border: 3px solid aliceblue;
+        border: 3px solid rgb(217, 236, 252);
         background-color: rgb(7, 52, 250);
         [class^="sia-"]{
             background-color: white;
@@ -79,5 +114,25 @@ header {
                 }
             }
         }
+    }
+}
+
+.example {
+    font-size: 13px;
+    background-color: white;
+    padding: 1em;
+    h2 {
+        margin: 1em 0em;
+    }
+    code {
+        display: inline-block;
+        white-space: pre-wrap;
+        color: #999;
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 1em;
+        background-color: #222;
+        text-align: left;
+        padding: 1em;
     }
 }

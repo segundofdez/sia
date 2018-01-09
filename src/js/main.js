@@ -6,12 +6,17 @@ $(function(){
 		$(this).addClass('is-selected');
 		var classTest = $('.is-selected span').text();
 
-		$('header a').removeClass();
-		$('header a').addClass(classTest);
+		$('header > .sia a').removeClass();
+		$('header > .sia a').addClass(classTest);
 
 		$('.name').text("." + classTest);
 
-		event.preventDefault();
-		event.stopPropagation();
+		return false;
+	});
+
+	$('.example .sia').click(function(){
+		$('.example .sia a').toggleClass('sia-nav sia-cross');
+
+		return false;
 	});
 });

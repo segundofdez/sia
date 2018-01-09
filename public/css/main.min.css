@@ -517,8 +517,9 @@ template {
 }
 .border-radius,
 [class^="sia-"],
-[class^="sia-"]:before,
-[class^="sia-"]:after {
+button.sia span,
+button.sia span:before,
+button.sia span:after {
   border-radius: 8px;
 }
 .center,
@@ -558,7 +559,10 @@ template {
 .line,
 [class^="sia-"],
 [class^="sia-"]:before,
-[class^="sia-"]:after {
+[class^="sia-"]:after,
+button.sia span,
+button.sia span:before,
+button.sia span:after {
   display: block;
   width: 32px;
   height: 4px;
@@ -732,9 +736,6 @@ template {
 }
 /* Page layout
    ========================================================================== */
-html {
-  background-color: aliceblue;
-}
 body {
   text-align: center;
   font-family: sans-serif;
@@ -747,8 +748,21 @@ body {
   padding: 0;
   margin: 0;
 }
+button.sia {
+  border: none;
+}
+button.sia span {
+  display: block !important;
+  position: relative;
+}
+button.sia span:before,
+button.sia span:after {
+  content: "";
+  position: absolute;
+}
 header {
-  margin: 2em 1em 0;
+  padding: 1.5em 1em;
+  background-color: #d9ecfc;
 }
 header .sia {
   display: block;
@@ -756,18 +770,40 @@ header .sia {
   pointer-events: none;
   cursor: default;
 }
+header .logo {
+  position: fixed;
+  right: -3em;
+  bottom: 7em;
+  text-align: left;
+  color: #adadad;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+header .logo a {
+  margin-left: 2em;
+  color: #0734fa;
+  text-decoration: none;
+  font-size: 13px;
+}
+header .logo a:hover {
+  color: #adadad;
+}
 header h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 1.75em;
   line-height: 1em;
+  color: #222;
 }
 header h1 + p {
-  font-size: 14px;
-  margin-bottom: 2em;
-  color: #999;
+  margin: 0;
+  font-size: 13px;
+  display: inline-block;
+}
+.name {
+  margin-top: 1em;
 }
 .test {
-  padding: 2em 1.5em;
+  margin-top: 1em;
 }
 .test .sia {
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
@@ -799,7 +835,7 @@ header h1 + p {
               -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 1em;
-  border: 3px solid aliceblue;
+  border: 3px solid #d9ecfc;
   background-color: #0734fa;
   cursor: pointer;
 }
@@ -821,4 +857,23 @@ header h1 + p {
 .test li:hover [class^="sia-"]:after,
 .test li:hover [class^="sia-"]:before {
   background-color: white;
+}
+.example {
+  font-size: 13px;
+  background-color: white;
+  padding: 1em;
+}
+.example h2 {
+  margin: 1em 0em;
+}
+.example code {
+  display: inline-block;
+  white-space: pre-wrap;
+  color: #999;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1em;
+  background-color: #222;
+  text-align: left;
+  padding: 1em;
 }
