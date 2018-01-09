@@ -1,6 +1,4 @@
 node_modules
-.editorconfig
 mix-manifest.json
 npm-debug.log
-package.json
 webpack
