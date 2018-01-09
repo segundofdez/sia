@@ -17,7 +17,7 @@ Sia is a (css | less) library to make simple icon animation.
 * Choose your default icon:
 
   * `sia-nav`
-  * `.sia-cross`
+  * `sia-cross`
   * `sia-plus`
   * `sia-minus`
   * `sia-check`
@@ -37,9 +37,9 @@ Sia is a (css | less) library to make simple icon animation.
 
 A demo is available in https://segundofdez.github.io/sia/
 
-# Contributing
+## Contributing
 
-Contributions are welcome via [**Pull Requests**](https://github.com/segundofdez/sia/pulls)
+Contributions are welcome via [Pull Requests](https://github.com/segundofdez/sia/pulls)
 
 ## Bugs and issues
 
