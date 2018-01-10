@@ -33,17 +33,25 @@ Sia is a (css | less) library to make simple icon animation.
   * `sia-circle`
   * `sia-circleo`
 
+* You can add a simple JQuery code to toggle two classes:
+```js
+$('.sia').click(function(){
+    $('.sia a').toggleClass('sia-nav sia-cross');
+    return false;
+});
+```
+
 ## Demo
 
 A demo is available in https://segundofdez.github.io/sia/
 
 ## Contributing
 
-Contributions are welcome via [Pull Requests](https://github.com/segundofdez/sia/pulls)
+Contributions are welcome via [Pull Requests](https://github.com/segundofdez/sia/pulls).
 
 ## Bugs and issues
 
-If you see a problem or have an idea and is not addressed yet, please open a [new issue](https://github.com/segundofdez/sia/issues)
+If you see a problem or have an idea and is not addressed yet, please open a [new issue](https://github.com/segundofdez/sia/issues).
 
 ## License
-Sia - Simple icon animation it's under [The MIT License (MIT)](https://github.com/segundofdez/sia/blob/master/LICENSE.md)
+Sia - Simple icon animation it's under [The MIT License (MIT)](https://github.com/segundofdez/sia/blob/master/LICENSE.md).
