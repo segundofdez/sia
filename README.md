@@ -33,6 +33,14 @@ Sia is a (css | less) library to make simple icon animation.
   * `sia-circle`
   * `sia-circleo`
 
+* You can add a simple JQuery code to toggle two classes:
+```js
+$('.sia').click(function(){
+    $('.sia a').toggleClass('sia-nav sia-cross');
+    return false;
+});
+```
+
 ## Demo
 
 A demo is available in https://segundofdez.github.io/sia/
