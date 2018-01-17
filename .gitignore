@@ -1,5 +1,5 @@
 node_modules
 npm-debug.log
 mix-manifest.json
-public/css/main.css
+css/main.css
 webpack

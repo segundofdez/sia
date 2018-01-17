@@ -10,8 +10,8 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
  |
  */
 
-mix.js('src/js/main.js', 'public/js')
-    .less('src/styles/main.less', 'public/css')
+mix.js('src/js/main.js', 'js')
+    .less('src/styles/main.less', 'css')
     .options({
         postCss: [
             require('autoprefixer')({
@@ -21,11 +21,11 @@ mix.js('src/js/main.js', 'public/js')
     })
     .combine([
         'node_modules/normalize.css/normalize.css',
-        'public/css/main.css'],
-        'public/css/main.min.css')
+        'css/main.css'],
+        'css/main.min.css')
     .browserSync({
         proxy: '0.0.0.0:8181',
-        files: ['public/*.html', 'public/css/*.css', 'public/js/*.js']
+        files: ['*.html', 'css/*.css', 'js/*.js']
     })
 ;
 
@@ -35,7 +35,7 @@ if(mix.inProduction()) {
         plugins: [
             new CopyWebpackPlugin([{
                 from: 'src/img',
-                to: 'public/img/',
+                to: 'img/',
             }]),
             new ImageminPlugin({
                 test: /\.(jpe?g|png|gif|svg)$/i,
