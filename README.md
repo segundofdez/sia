@@ -17,6 +17,10 @@ Sia is a (css | less) library to make simple icon animation.
 * Choose your default icon:
 
   * `sia-nav`
+  * `sia-navright`
+  * `sia-navleft`
+  * `sia-navrightm`
+  * `sia-navleftm`
   * `sia-cross`
   * `sia-plus`
   * `sia-minus`
