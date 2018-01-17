@@ -1,18 +1,18 @@
 /* ==========================================================================
-   Sia - Simple Icon Animation
-   ========================================================================== */
+Sia - Simple Icon Animation
+========================================================================== */
 /*
- * Create animated icons on links
- *
- * Html example:
- * -----------------------------------------------------------------------------
- * <div class="si">
- *      <a class="si-nav" href="#"><span>show/hide navigation</span></a>
- * </div>
- */
+* Create animated icons on links
+*
+* Html example:
+* -----------------------------------------------------------------------------
+* <div class="si">
+*      <a class="si-nav" href="#"><span>show/hide navigation</span></a>
+* </div>
+*/
 
 /* Variables
-   ========================================================================== */
+========================================================================== */
 @color-main: black;
 @color-hover: #999;
 
@@ -26,7 +26,7 @@
 @border-radius: @main-height * 2;
 
 /* Common classes
-   ========================================================================== */
+    ========================================================================== */
 .transparent {
     background-color: transparent !important;
 }
@@ -61,7 +61,7 @@
 
 
 /* Icon container
-   ========================================================================== */
+    ========================================================================== */
 .sia {
     display: inline-block;
     height: @icon-height;
@@ -142,7 +142,7 @@
 }
 
 /* Common icon
-   ========================================================================== */
+    ========================================================================== */
 [class^="sia-"] {
     position: relative;
     &:extend(.line);
@@ -157,7 +157,7 @@
 }
 
 /* Icons
-   ========================================================================== */
+    ========================================================================== */
 .sia-nav {
     &:extend(.center);
     &:before {
@@ -165,6 +165,47 @@
     }
     &:after{
         transform: translateY(-@icon-height/3.5);
+    }
+}
+
+.sia-navright:extend(.icon-width-mini) {
+    &:extend(.center);
+    &:before  {
+        transform: translateY(@icon-height/3.5);
+    }
+    &:after {
+        transform: translateY(-@icon-height/3.5);
+    }
+}
+
+.sia-navleft:extend(.icon-width-mini) {
+    &:extend(.center);
+    transform: translateX(@icon-width - @icon-width-mini) translateY(14px);
+    &:before {
+        transform: translateX(-@icon-width + @icon-width-mini) translateY(@icon-height/3.5);
+    }
+    &:after{
+        transform: translateX(-@icon-width + @icon-width-mini) translateY(-@icon-height/3.5);
+    }
+}
+
+.sia-navrightm {
+    &:extend(.center);
+    &:before:extend(.icon-width-mini)  {
+        transform: translateY(@icon-height/3.5);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateY(-@icon-height/3.5);
+    }
+}
+
+.sia-navleftm {
+    &:extend(.center);
+    &:before:extend(.icon-width-mini) {
+        transform: translateX(@icon-width - @icon-width-mini) translateY(@icon-height/3.5);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX(@icon-width - @icon-width-mini) translateY(-@icon-height/3.5);
     }
 }
 
@@ -227,7 +268,7 @@
         transform: translateX(@icon-width/6) translateY(-@icon-height/5) rotate(45deg);
     }
     &:after:extend(.icon-width-mini) {
-       transform: translateX(@icon-width/6) translateY(@icon-height/5) rotate(-45deg);
+        transform: translateX(@icon-width/6) translateY(@icon-height/5) rotate(-45deg);
     }
 }
 
@@ -247,7 +288,7 @@
         transform: translateX(@icon-width/6) translateY(-@icon-height/5) rotate(-45deg);
     }
     &:after:extend(.icon-width-mini) {
-       transform: translateX(@icon-width/6) translateY(@icon-height/5) rotate(45deg);
+        transform: translateX(@icon-width/6) translateY(@icon-height/5) rotate(45deg);
     }
 }
 
@@ -258,7 +299,7 @@
         transform: translateX(-@icon-width-mini / 3.5) translateY(@icon-width-mini / 3.5) rotate(45deg);
     }
     &:after:extend(.icon-width-mini) {
-       transform: translateX(-@icon-width-mini / 3.5) translateY(-@icon-width-mini / 3.5) rotate(-45deg);
+        transform: translateX(-@icon-width-mini / 3.5) translateY(-@icon-width-mini / 3.5) rotate(-45deg);
     }
 }
 

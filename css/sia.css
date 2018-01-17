@@ -1,18 +1,18 @@
 /* ==========================================================================
-   Sia - Simple Icon Animation
-   ========================================================================== */
+Sia - Simple Icon Animation
+========================================================================== */
 /*
- * Create animated icons on links
- *
- * Html example:
- * -----------------------------------------------------------------------------
- * <div class="si">
- *      <a class="si-nav" href="#"><span>show/hide navigation</span></a>
- * </div>
- */
+* Create animated icons on links
+*
+* Html example:
+* -----------------------------------------------------------------------------
+* <div class="si">
+*      <a class="si-nav" href="#"><span>show/hide navigation</span></a>
+* </div>
+*/
 
 /* Common classes
-   ========================================================================== */
+    ========================================================================== */
 .transparent,
 .sia .sia-cross,
 .sia .sia-plus,
@@ -67,6 +67,10 @@
 }
 .center,
 .sia-nav,
+.sia-navright,
+.sia-navleft,
+.sia-navrightm,
+.sia-navleftm,
 .sia-cross,
 .sia-plus,
 .sia-minus,
@@ -80,6 +84,12 @@
           transform: translateY(14px);
 }
 .icon-width-mini,
+.sia-navright,
+.sia-navleft,
+.sia-navrightm:before,
+.sia-navrightm:after,
+.sia-navleftm:before,
+.sia-navleftm:after,
 .sia-check:after,
 .sia-top:before,
 .sia-top:after,
@@ -109,7 +119,7 @@
   background-color: black;
 }
 /* Icon container
-   ========================================================================== */
+    ========================================================================== */
 .sia {
   display: inline-block;
   height: 32px;
@@ -130,7 +140,7 @@
   border-color: #999;
 }
 /* Common icon
-   ========================================================================== */
+    ========================================================================== */
 [class^="sia-"] {
   position: relative;
 }
@@ -140,7 +150,7 @@
   position: absolute;
 }
 /* Icons
-   ========================================================================== */
+    ========================================================================== */
 .sia-nav:before {
   -webkit-transform: translateY(9.14285714px);
           transform: translateY(9.14285714px);
@@ -148,6 +158,42 @@
 .sia-nav:after {
   -webkit-transform: translateY(-9.14285714px);
           transform: translateY(-9.14285714px);
+}
+.sia-navright:before {
+  -webkit-transform: translateY(9.14285714px);
+          transform: translateY(9.14285714px);
+}
+.sia-navright:after {
+  -webkit-transform: translateY(-9.14285714px);
+          transform: translateY(-9.14285714px);
+}
+.sia-navleft {
+  -webkit-transform: translateX(10px) translateY(14px);
+          transform: translateX(10px) translateY(14px);
+}
+.sia-navleft:before {
+  -webkit-transform: translateX(-10px) translateY(9.14285714px);
+          transform: translateX(-10px) translateY(9.14285714px);
+}
+.sia-navleft:after {
+  -webkit-transform: translateX(-10px) translateY(-9.14285714px);
+          transform: translateX(-10px) translateY(-9.14285714px);
+}
+.sia-navrightm:before {
+  -webkit-transform: translateY(9.14285714px);
+          transform: translateY(9.14285714px);
+}
+.sia-navrightm:after {
+  -webkit-transform: translateY(-9.14285714px);
+          transform: translateY(-9.14285714px);
+}
+.sia-navleftm:before {
+  -webkit-transform: translateX(10px) translateY(9.14285714px);
+          transform: translateX(10px) translateY(9.14285714px);
+}
+.sia-navleftm:after {
+  -webkit-transform: translateX(10px) translateY(-9.14285714px);
+          transform: translateX(10px) translateY(-9.14285714px);
 }
 .sia-cross:before {
   -webkit-transform: rotate(45deg);

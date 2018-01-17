@@ -2,3 +2,4 @@ node_modules
 mix-manifest.json
 npm-debug.log
 webpack
+css/main.css
