@@ -17,9 +17,17 @@ Sia is a (css | less) library to make simple icon animation.
 * Choose your default icon:
 
   * `sia-nav`
+  * `sia-navright`
+  * `sia-navcenter`
+  * `sia-navleft`
+  * `sia-navrightm`
+  * `sia-navcenterm`
+  * `sia-navleftm`
   * `sia-cross`
   * `sia-plus`
   * `sia-minus`
+  * `sia-slash`
+  * `sia-backslash`
   * `sia-check`
   * `sia-search`
   * `sia-top`
@@ -47,11 +55,11 @@ A demo is available in https://segundofdez.github.io/sia/
 
 ## Contributing
 
-Contributions are welcome via [Pull Requests](https://github.com/segundofdez/sia/pulls)
+Contributions are welcome via [Pull Requests](https://github.com/segundofdez/sia/pulls).
 
 ## Bugs and issues
 
-If you see a problem or have an idea and is not addressed yet, please open a [new issue](https://github.com/segundofdez/sia/issues)
+If you see a problem or have an idea and is not addressed yet, please open a [new issue](https://github.com/segundofdez/sia/issues).
 
 ## License
-Sia - Simple icon animation it's under [The MIT License (MIT)](https://github.com/segundofdez/sia/blob/master/LICENSE.md)
+Sia - Simple icon animation it's under [The MIT License (MIT)](https://github.com/segundofdez/sia/blob/master/LICENSE.md).
