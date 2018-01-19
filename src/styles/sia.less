@@ -251,6 +251,16 @@ Sia - Simple Icon Animation
     &:extend(.center);
 }
 
+.sia-slash {
+    &:extend(.center);
+    transform:  translateY((@icon-width - @icon-width-mini) + @main-height)  rotate(-45deg);
+}
+
+.sia-backslash {
+    &:extend(.center);
+    transform:  translateY((@icon-width - @icon-width-mini) + @main-height)  rotate(45deg);
+}
+
 .sia-check {
     &:extend(.center);
     &:before {

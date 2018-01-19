@@ -532,6 +532,8 @@ button.sia span:after {
 .sia-cross,
 .sia-plus,
 .sia-minus,
+.sia-slash,
+.sia-backslash,
 .sia-check,
 .sia-top,
 .sia-right,
@@ -690,6 +692,14 @@ button.sia span:after {
 .sia-plus:before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+.sia-slash {
+  -webkit-transform: translateY(14px) rotate(-45deg);
+          transform: translateY(14px) rotate(-45deg);
+}
+.sia-backslash {
+  -webkit-transform: translateY(14px) rotate(45deg);
+          transform: translateY(14px) rotate(45deg);
 }
 .sia-check:before {
   -webkit-transform: translateX(4px) translateY(4px) rotate(45deg);
