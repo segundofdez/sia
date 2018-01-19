@@ -146,7 +146,7 @@ Sia - Simple Icon Animation
 [class^="sia-"] {
     position: relative;
     &:extend(.line);
-    &:extend(.border-radius);
+    //&:extend(.border-radius);
     &:before,
     &:after {
         &:extend(.line);
@@ -178,9 +178,20 @@ Sia - Simple Icon Animation
     }
 }
 
+.sia-navcenter:extend(.icon-width-mini) {
+    &:extend(.center);
+    transform: translateX((@icon-width - @icon-width-mini) / 2)  translateY(@icon-width - @icon-width-mini + @main-height);
+    &:before  {
+        transform: translateX(-(@icon-width - @icon-width-mini) / 2) translateY(@icon-height/3.5);
+    }
+    &:after {
+        transform: translateX(-(@icon-width - @icon-width-mini) / 2) translateY(-@icon-height/3.5);
+    }
+}
+
 .sia-navleft:extend(.icon-width-mini) {
     &:extend(.center);
-    transform: translateX(@icon-width - @icon-width-mini) translateY(14px);
+    transform: translateX(@icon-width - @icon-width-mini) translateY(@icon-width - @icon-width-mini + @main-height);
     &:before {
         transform: translateX(-@icon-width + @icon-width-mini) translateY(@icon-height/3.5);
     }
@@ -196,6 +207,16 @@ Sia - Simple Icon Animation
     }
     &:after:extend(.icon-width-mini) {
         transform: translateY(-@icon-height/3.5);
+    }
+}
+
+.sia-navcenterm {
+    &:extend(.center);
+    &:before:extend(.icon-width-mini)  {
+        transform: translateX((@icon-width - @icon-width-mini) / 2) translateY(@icon-height/3.5);
+    }
+    &:after:extend(.icon-width-mini) {
+        transform: translateX((@icon-width - @icon-width-mini) / 2) translateY(-@icon-height/3.5);
     }
 }
 

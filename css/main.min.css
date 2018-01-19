@@ -516,7 +516,6 @@ Sia - Simple Icon Animation
   transition: ease-in all 0.25s;
 }
 .border-radius,
-[class^="sia-"],
 button.sia span,
 button.sia span:before,
 button.sia span:after {
@@ -525,8 +524,10 @@ button.sia span:after {
 .center,
 .sia-nav,
 .sia-navright,
+.sia-navcenter,
 .sia-navleft,
 .sia-navrightm,
+.sia-navcenterm,
 .sia-navleftm,
 .sia-cross,
 .sia-plus,
@@ -542,9 +543,12 @@ button.sia span:after {
 }
 .icon-width-mini,
 .sia-navright,
+.sia-navcenter,
 .sia-navleft,
 .sia-navrightm:before,
 .sia-navrightm:after,
+.sia-navcenterm:before,
+.sia-navcenterm:after,
 .sia-navleftm:before,
 .sia-navleftm:after,
 .sia-check:after,
@@ -627,6 +631,18 @@ button.sia span:after {
   -webkit-transform: translateY(-9.14285714px);
           transform: translateY(-9.14285714px);
 }
+.sia-navcenter {
+  -webkit-transform: translateX(5px) translateY(14px);
+          transform: translateX(5px) translateY(14px);
+}
+.sia-navcenter:before {
+  -webkit-transform: translateX(-5px) translateY(9.14285714px);
+          transform: translateX(-5px) translateY(9.14285714px);
+}
+.sia-navcenter:after {
+  -webkit-transform: translateX(-5px) translateY(-9.14285714px);
+          transform: translateX(-5px) translateY(-9.14285714px);
+}
 .sia-navleft {
   -webkit-transform: translateX(10px) translateY(14px);
           transform: translateX(10px) translateY(14px);
@@ -646,6 +662,14 @@ button.sia span:after {
 .sia-navrightm:after {
   -webkit-transform: translateY(-9.14285714px);
           transform: translateY(-9.14285714px);
+}
+.sia-navcenterm:before {
+  -webkit-transform: translateX(5px) translateY(9.14285714px);
+          transform: translateX(5px) translateY(9.14285714px);
+}
+.sia-navcenterm:after {
+  -webkit-transform: translateX(5px) translateY(-9.14285714px);
+          transform: translateX(5px) translateY(-9.14285714px);
 }
 .sia-navleftm:before {
   -webkit-transform: translateX(10px) translateY(9.14285714px);
