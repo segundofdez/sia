@@ -2,7 +2,7 @@
 
 Sia is a (css | less) library to make simple icon animation.
 
-![Demo](https://raw.githubusercontent.com/segundofdez/sia/b070d0b73b687a68a92dafe8dafa8a0369aa05a0/sia.gif)
+![Demo](https://raw.githubusercontent.com/segundofdez/sia/6d61a44e1c9e49aebbf91d81e40a8d61a0714e92/sia-2.gif)
 
 ## How to use
 * Import the css file into your html:
